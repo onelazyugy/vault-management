@@ -1,20 +1,36 @@
 import { Component } from '@angular/core';
 import {NgForm} from '@angular/forms';
 
+import { SearchService } from '../services/search-service';
+import { SearchModel } from './searchmodel';
+
 @Component({
     selector: 'search',
-    templateUrl: 'app/search/search.component.html'
+    templateUrl: 'app/search/search.component.html',
+    providers: [SearchService]
 })
 
 export class SearchComponent {
-    model = {'query': ''};
-
+    model = new SearchModel('');
+    searchResults: any[] = [];
+    
+    constructor(private searchService: SearchService) { }
+    
     query(){
         console.log('login() model==>' + this.model.query);
-    }
-
-    oneTextEnter(queryString: string, searchForm: NgForm){
-        //TODO: 
-        this.model.query = queryString;
+        this.searchService.search(this.model).subscribe(
+            data => {
+                if(data){
+                    console.log('search result: ' + data);
+                    this.searchResults = data;
+                }
+            },
+            error => {
+                console.log('search request error: ' + error)
+            },
+            () => {
+                console.log('Completed search request');
+            }
+        )
     }
 }

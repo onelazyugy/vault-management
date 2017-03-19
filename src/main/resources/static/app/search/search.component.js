@@ -9,23 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var search_service_1 = require('../services/search-service');
+var searchmodel_1 = require('./searchmodel');
 var SearchComponent = (function () {
-    function SearchComponent() {
-        this.model = { 'query': '' };
+    function SearchComponent(searchService) {
+        this.searchService = searchService;
+        this.model = new searchmodel_1.SearchModel('');
+        this.searchResults = [];
     }
     SearchComponent.prototype.query = function () {
+        var _this = this;
         console.log('login() model==>' + this.model.query);
-    };
-    SearchComponent.prototype.oneTextEnter = function (queryString, searchForm) {
-        //TODO: 
-        this.model.query = queryString;
+        this.searchService.search(this.model).subscribe(function (data) {
+            if (data) {
+                console.log('search result: ' + data);
+                _this.searchResults = data;
+            }
+        }, function (error) {
+            console.log('search request error: ' + error);
+        }, function () {
+            console.log('Completed search request');
+        });
     };
     SearchComponent = __decorate([
         core_1.Component({
             selector: 'search',
-            templateUrl: 'app/search/search.component.html'
+            templateUrl: 'app/search/search.component.html',
+            providers: [search_service_1.SearchService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [search_service_1.SearchService])
     ], SearchComponent);
     return SearchComponent;
 }());
