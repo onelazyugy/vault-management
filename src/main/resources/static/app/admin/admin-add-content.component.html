@@ -1,0 +1,64 @@
+<div style="padding:5px;">
+    <form #addEntryForm="ngForm" (submit)="addEntry(addEntryForm)" novalidate>
+        <div class="form-group" [class.has-error]="hasCategoryError">
+            <label for="category">Category</label>
+            <select class="form-control" #category name="category"
+                    (blur)="validateCategory(category.value)" 
+                    (change)="validateCategory(category.value)"
+                    [(ngModel)]="entryModel.category">
+                <option value="default">Select a Category...</option>
+                <option *ngFor="let cat of categories">{{cat}}</option>
+            </select>
+            <div *ngIf="hasCategoryError" class="alert alert-danger">
+                An valid option must be selected.
+            </div>
+        </div>
+        <div class="form-group" [class.has-error]="tag.invalid && tag.dirty">
+            <label class="control-label" for="tagId">Tag</label>
+            <input #tag="ngModel" id="tagId" type="text" class="form-control" pattern="^[a-zA-Z0-9,|]*" required name="tag" placeholder="enter a tag, separate by comma"
+            [ngModel]="entryModel.tag" (ngModelChange)="onTagInputChange($event, addEntryForm)">
+            <div *ngIf="tag.invalid && tag.dirty" class="alert alert-danger">
+                Tag must be a combination of letter (a-z).
+            </div>
+        </div>
+        <div class="form-group" [class.has-error]="username.invalid && username.dirty">
+            <label class="control-label" for="usernameId">User Name</label>
+            <input #username="ngModel" id="usernameId"  type="text" class="form-control" pattern="^[a-zA-Z0-9]*" required name="username" placeholder="enter a username"
+            [ngModel]="entryModel.username" (ngModelChange)="onUserNameInputChange($event, addEntryForm)">
+            <div *ngIf="username.invalid && username.dirty" class="alert alert-danger">
+                User Name must be a combination of letter and or number.
+            </div>
+        </div>
+        <div class="form-group" [class.has-error]="comment.invalid && comment.dirty">
+            <label class="control-label" for="commentId">Comment</label>
+            <textarea class="form-control" rows="5" #comment="ngModel" id="commentId" class="form-control" name="Comment"
+            [ngModel]="entryModel.comment" (ngModelChange)="onComentChange($event, addEntryForm)"></textarea>
+        </div>
+        <div class="form-group" [class.has-error]="password.invalid && password.dirty">
+            <label class="control-label" for="passwordId">Password</label>
+            <input #password="ngModel" id="passwordId"  type="password" class="form-control" pattern="^[^\s]*" required name="password" placeholder="enter a password"
+            [ngModel]="entryModel.password" (ngModelChange)="onPasswordInputChange($event, addEntryForm)">
+            <div *ngIf="password.invalid && password.dirty" class="alert alert-danger">
+                Password cannot have white space.
+            </div>
+        </div>
+        <div class="form-group" [class.has-error]="confirmPassword.invalid && confirmPassword.dirty">
+            <label class="control-label"  for="confirmPasswordId">Confirm Password</label>
+            <input #confirmPassword="ngModel" id="confirmPasswordId"  type="password" class="form-control" pattern="^[^\s]*" required name="passwordConfirm" placeholder="confirm password"
+            [ngModel]="entryModel.confirmPassword" (ngModelChange)="onPasswordConfirmInputChange($event, addEntryForm)">
+            <div *ngIf="confirmPassword.invalid && confirmPassword.dirty" class="alert alert-danger">
+                Confirm password cannot have white space.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 pull-right">
+                <p class="button btn-toolbar text-center pull-right">
+                    <button type="submit" class="btn btn-primary pull-right" [disabled]="addEntryForm.invalid">SAVE</button>
+                </p>    
+            </div>
+            <div [hidden]="!success" class="col-md-8 pull-left">                
+                <div class="alert alert-{{successOrDangerClass}}" role="alert">{{responseMsg}}</div>
+            </div>
+        </div>
+    </form>
+</div>

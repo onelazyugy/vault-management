@@ -1,0 +1,12 @@
+# Local Dev
+lifecycle: default
+
+# Development
+---
+spring.profiles: development
+lifecycle: development
+
+# QA
+---
+spring.profiles: qa
+lifecycle: qa

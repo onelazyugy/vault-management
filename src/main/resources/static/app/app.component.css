@@ -1,0 +1,15 @@
+li {
+    font-size: large;
+}
+
+div.panel-heading {
+   font-size: x-large; 
+}
+
+div.bg-img {
+    background-image: url("app/assets/images/bg.jpg");
+}
+
+a.cursor {
+    cursor:default;
+}

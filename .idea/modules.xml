@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vault.iml" filepath="$PROJECT_DIR$/.idea/modules/vault.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vault_main.iml" filepath="$PROJECT_DIR$/.idea/modules/vault_main.iml" group="vault" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vault_test.iml" filepath="$PROJECT_DIR$/.idea/modules/vault_test.iml" group="vault" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+<div class='container'>
+    <div class="row">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-10">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." (keyup.enter)="query()" [(ngModel)]="model.query">
+                <span class="input-group-btn">
+                    <button (click)="query()" class="btn btn-primary">SEARCH</button>
+                </span>
+            </div><br/>
+            <div *ngIf="model.query != ''" class="panel panel-default">
+                <div class="panel-body">
+                    {{model.query}}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
+</div>BOA

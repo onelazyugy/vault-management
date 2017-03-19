@@ -1,0 +1,9 @@
+---
+inherit: manifest.yml
+applications:
+- name: vault-dev
+  instances: 1
+  host: vault-dev
+  env:
+    JAVA_ENV: 'development'
+    SPRING_PROFILES_ACTIVE: development    

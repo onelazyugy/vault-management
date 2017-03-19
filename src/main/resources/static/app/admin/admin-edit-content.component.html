@@ -1,0 +1,37 @@
+<div style="padding:5px;">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h3><span class="label label-primary">ALL AVAILABLE ENTRIES</span></h3>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tag</th>
+                        <th>Password</th>
+                        <th>Username</th>
+                        <th>Comment</th>
+                        <th>DateTime</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let entry of entries">
+                        <td>{{entry.id}}</td>
+                        <td>{{entry.tag}}</td>
+                        <td>{{entry.password}}</td>
+                        <td>{{entry.username}}</td>
+                        <td>{{entry.comment}}</td>
+                        <td>{{entry.dateTime}}</td>
+                        <td><span class="glyphicon glyphicon-edit"></span> | <span class="glyphicon glyphicon-remove-circle"></span></td>
+                    </tr>
+                </tbody>
+            </table>   
+        </div> 
+    </div>
+</div>

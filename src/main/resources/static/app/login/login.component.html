@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{panelTitle | uppercase}}</h3>
+            </div>
+            <div class="panel-body">                
+                <form #loginForm="ngForm" (submit)="login(loginForm)" novalidate>
+                    <div class="form-group" [class.has-error]="username.invalid && username.dirty">
+                        <label class="control-label" for="usernameId">User Name</label>
+                        <input #username="ngModel" id="usernameId" type="text" class="form-control" pattern="^[a-zA-Z]*" required name="username" 
+                        [ngModel]="model.username" (ngModelChange)="onUserNameChange($event, loginForm)" placeholder="username">
+                        <div *ngIf="username.invalid && username.dirty" class="alert alert-danger">
+                            User name is required and must be a combination of letter (a-z).
+                        </div>                    
+                    </div>
+                    <div class="form-group" [class.has-error]="password.invalid && password.dirty">
+                        <label class="control-label" for="passwordId">Password</label>
+                        <input #password="ngModel" id="passwordId" type="password" class="form-control" pattern="^([a-zA-Z0-9_-]){3,}$" required name="password" 
+                        [ngModel]="model.password" (ngModelChange)="onPasswordChange($event, loginForm)" placeholder="password">
+                        <div *ngIf="password.invalid && password.dirty" class="alert alert-danger">
+                            Password is required, must be alphnumeric and minimum of 3 characters.
+                        </div>                    
+                    </div>
+                    <label class="alert alert-warning" *ngIf="loginForm.valid">{{messageLabel}}</label> 
+                    <button type="submit" class="btn btn-primary pull-right" [disabled]="loginForm.invalid">LOGIN</button>               
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>

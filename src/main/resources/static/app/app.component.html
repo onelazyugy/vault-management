@@ -1,0 +1,32 @@
+<div class='container'>
+    <div class="row">
+        <nav class='navbar navbar-inverse'>
+            <div class='container-fluid'>
+                <div class="navbar-header">
+                    <a class="navbar-brand" [routerLink]="['/home']">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </a>
+                </div>
+                <ul class='nav navbar-nav'>
+                    <li *ngIf="isShowAdminMenuOption"><a [routerLink]="['/admin']">Admin</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li *ngIf="isShowAdminMenuOption"><a><span class="glyphicon glyphicon-user"></span> {{currentLoggedUser}}</a></li>   
+                    <li *ngIf="isShowAdminMenuOption" (click)="logout()"><a class="cursor"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>               
+                </ul>
+            </div>
+        </nav>
+        <div class='container bg-img'>
+            <!--the component view will be display below using the router-outlet-->
+            <div class="row">      
+                <logo></logo>
+            </div>
+            <div class="row">        
+                <router-outlet></router-outlet>
+            </div>
+            <div class="row">
+                <footer></footer>
+            </div>
+        </div>
+    </div>
+</div>

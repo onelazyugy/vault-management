@@ -1,0 +1,7 @@
+buildpack: https://github.com/cloudfoundry/java-buildpack.git
+path: ./build/libs/vault.war
+instances: 1
+memory: 1G
+disk_quota: 1G
+random-route: false
+
