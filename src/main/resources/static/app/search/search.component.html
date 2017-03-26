@@ -4,6 +4,9 @@
         </div>
         <div class="col-lg-10">
             <div class="input-group">
+                <!--                
+                <input type="text" class="form-control" placeholder="Search..." [ngModel]='txt' (ngModelChange)='changed($event)' />
+                -->
                 <input type="text" class="form-control" placeholder="Search..." (keyup)="query()" [(ngModel)]="model.query">
                 <span class="input-group-btn">
                     <button (click)="query()" class="btn btn-primary">SEARCH</button>

@@ -11,7 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var search_service_1 = require('../services/search-service');
 var searchmodel_1 = require('./searchmodel');
+require('rxjs/add/operator/debounceTime');
+require('rxjs/add/operator/distinctUntilChanged');
 var SearchComponent = (function () {
+    /*
+    txt: string;
+    txtChanged: Subject<string> = new Subject<string>();
+    */
     function SearchComponent(searchService) {
         this.searchService = searchService;
         this.model = new searchmodel_1.SearchModel('');
