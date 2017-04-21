@@ -17,8 +17,8 @@ import java.util.*;
  * Created by onelazyguy on 12/31/16.
  */
 @Service
-public class AdminDao implements Dao<AdminEntry> {
-    private final Logger LOG = LoggerFactory.getLogger(AdminDao.class);
+public class AdminDaoImpl implements Dao<AdminEntry> {
+    private final Logger LOG = LoggerFactory.getLogger(AdminDaoImpl.class);
     @Autowired
     private MongoTemplate mongoTemplate;
 

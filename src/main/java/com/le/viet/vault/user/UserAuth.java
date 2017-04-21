@@ -1,6 +1,6 @@
 package com.le.viet.vault.user;
 
-import com.le.viet.vault.dao.UserDao;
+import com.le.viet.vault.dao.UserDaoImpl;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.User;
 import com.le.viet.vault.validation.GeneralValidation;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 public class UserAuth {
     private final Logger LOG = LoggerFactory.getLogger(UserAuth.class);
     @Autowired
-    private UserDao userDao;
+    private UserDaoImpl userDao;
     public boolean login(User user, HttpServletRequest req)throws VaultException{
         LOG.debug("STARTED: login");
         boolean isLoginSuccess = false;

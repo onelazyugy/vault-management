@@ -1,6 +1,6 @@
 package com.le.viet.vault.controller;
 
-import com.le.viet.vault.dao.UserDao;
+import com.le.viet.vault.dao.UserDaoImpl;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.User;
 import com.le.viet.vault.user.UserAuth;
@@ -21,7 +21,8 @@ import javax.servlet.http.HttpSession;
 public class VaultController {
 	private final Logger LOG = LoggerFactory.getLogger(VaultController.class);
 	@Autowired UserAuth userAuth;
-	@Autowired UserDao userDao;
+	@Autowired
+	UserDaoImpl userDao;
 
 	@RequestMapping(value = "/ping", method = RequestMethod.GET)
 	public String ping(){

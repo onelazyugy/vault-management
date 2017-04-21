@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
  * Created by onelazyguy on 3/18/17.
  */
 @Service
-public class SearchDao implements Dao<SearchQuery>{
-    private final Logger LOG = LoggerFactory.getLogger(SearchDao.class);
+public class SearchDaoImpl implements Dao<SearchQuery>{
+    private final Logger LOG = LoggerFactory.getLogger(SearchDaoImpl.class);
 
     @Override
     public boolean add(SearchQuery search) throws VaultException {

@@ -1,6 +1,6 @@
 package com.le.viet.vault.controller;
 
-import com.le.viet.vault.dao.SearchDao;
+import com.le.viet.vault.dao.SearchDaoImpl;
 import com.le.viet.vault.model.SearchQuery;
 import com.le.viet.vault.model.SearchQueryResponse;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SearchController {
     private final Logger LOG = LoggerFactory.getLogger(SearchController.class);
     @Autowired
-    private SearchDao searchDao;
+    private SearchDaoImpl searchDao;
 
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     public SearchQueryResponse[] getUserStatus(@RequestBody SearchQuery search){

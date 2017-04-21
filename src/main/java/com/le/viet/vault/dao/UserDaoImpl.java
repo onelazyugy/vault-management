@@ -18,8 +18,8 @@ import java.util.Date;
  * Created by onelazyguy on 12/29/16.
  */
 @Service
-public class UserDao implements Dao<User> {
-    private final Logger LOG = LoggerFactory.getLogger(UserDao.class);
+public class UserDaoImpl implements Dao<User> {
+    private final Logger LOG = LoggerFactory.getLogger(UserDaoImpl.class);
     @Autowired
     private MongoTemplate mongoTemplate;
 
