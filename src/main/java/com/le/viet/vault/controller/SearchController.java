@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/rs")
 public class SearchController {
     private final Logger LOG = LoggerFactory.getLogger(SearchController.class);
+    @Autowired
+    private SearchDaoImpl searchDaoImpl;
 
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     public SearchQueryResponse[] getUserStatus(@RequestBody SearchQuery search){

@@ -26,15 +26,13 @@ var SearchComponent = (function () {
     }
     SearchComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log('ngOnInit from search component');
-        this.seachControl.valueChanges
+        this.seachControl
+            .valueChanges
             .debounceTime(500)
-            .subscribe(function (query) {
-            _this.model.query = query;
-            console.log("model for search is: " + _this.model.query);
+            .subscribe(function (userSearchInput) {
+            _this.model.query = userSearchInput;
             _this.searchService.search(_this.model).subscribe(function (data) {
                 if (data) {
-                    console.log('search result: ' + data);
                     _this.searchResults = data;
                 }
             }, function (error) {
@@ -42,46 +40,7 @@ var SearchComponent = (function () {
             }, function () {
                 console.log('Completed search request');
             });
-            _this.searchString = query;
-            console.log("my search query is: ==>: " + query);
         });
-        /*
-        query(){
-            console.log('query() model==>' + this.model.query);
-            this.searchService.search(this.model).subscribe(
-                data => {
-                    if(data){
-                        console.log('search result: ' + data);
-                        this.searchResults = data;
-                    }
-                },
-                error => {
-                    console.log('search request error: ' + error)
-                },
-                () => {
-                    console.log('Completed search request');
-                }
-            )
-        }
-        */
-        /*
-        this.searchQueryControl.valueChanges
-        .debounceTime(500)
-        .subscribe(
-            data => {
-                if(data){
-                    console.log('search result: ' + data);
-                    this.searchResults = data;
-                }
-            },
-            error => {
-                console.log('search request error: ' + error)
-            },
-            () => {
-                console.log('Completed search request');
-            }
-        );
-        */
     };
     SearchComponent = __decorate([
         core_1.Component({
