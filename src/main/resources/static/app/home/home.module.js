@@ -26,6 +26,7 @@ var HomeModule = (function () {
             ],
             imports: [
                 forms_1.FormsModule,
+                forms_1.ReactiveFormsModule,
                 common_1.CommonModule,
                 router_1.RouterModule.forChild([
                     { path: 'home', component: home_component_1.HomeComponent }

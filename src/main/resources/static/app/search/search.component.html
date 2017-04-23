@@ -1,43 +1,9 @@
 <div class='container'>
     <div class="row">
-        <div class="col-lg-1">
-        </div>
-        <div class="col-lg-10">
-            <div class="input-group">
-                <!--                
-                <input type="text" class="form-control" placeholder="Search..." [ngModel]='txt' (ngModelChange)='changed($event)' />
-                -->
-                <input type="text" class="form-control" placeholder="Search..." (keyup)="query()" [(ngModel)]="model.query">
-                <span class="input-group-btn">
-                    <button (click)="query()" class="btn btn-primary">SEARCH</button>
-                </span>
-            </div><br/>
-            <div *ngIf="model.query != ''" class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <table class="table table-hover table-striped table-condensed">
-                                <thead>
-                                    <tr>
-                                        <th>Tag</th>
-                                        <th>UserName</th>
-                                        <th>Password</th>      
-                                    </tr>      
-                                </thead>
-                                <tbody>
-                                    <tr *ngFor="let result of searchResults">
-                                        <td>{{result.tag}}</td>
-                                        <td>{{result.username}}</td>
-                                        <td>{{result.password}}</td>                                    
-                                    </tr>
-                                </tbody>   
-                            </table>        
-                        </div>
-                    looking for: {{model.query}}
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-1">
-        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" [formGroup]="searchFormGroup">
+            <input type="text" class="form-control" [value]="searchString" [formControl]="seachControl">
+        </div>                  
+        <div class="col-lg-1"></div>
     </div>
 </div>

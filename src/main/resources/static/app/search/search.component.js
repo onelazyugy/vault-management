@@ -9,33 +9,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var search_service_1 = require('../services/search-service');
 var searchmodel_1 = require('./searchmodel');
 require('rxjs/add/operator/debounceTime');
 require('rxjs/add/operator/distinctUntilChanged');
+require('rxjs/add/operator/debounceTime');
 var SearchComponent = (function () {
-    /*
-    txt: string;
-    txtChanged: Subject<string> = new Subject<string>();
-    */
     function SearchComponent(searchService) {
         this.searchService = searchService;
         this.model = new searchmodel_1.SearchModel('');
         this.searchResults = [];
+        this.searchString = '';
+        this.seachControl = new forms_1.FormControl();
+        this.searchFormGroup = new forms_1.FormGroup({});
     }
-    SearchComponent.prototype.query = function () {
+    SearchComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log('login() model==>' + this.model.query);
-        this.searchService.search(this.model).subscribe(function (data) {
-            if (data) {
-                console.log('search result: ' + data);
-                _this.searchResults = data;
-            }
-        }, function (error) {
-            console.log('search request error: ' + error);
-        }, function () {
-            console.log('Completed search request');
+        console.log('ngOnInit from search component');
+        this.seachControl.valueChanges
+            .debounceTime(1000)
+            .subscribe(function (s) {
+            _this.searchString = s;
+            console.log("s ==>: " + s);
         });
+        /*
+        this.searchQueryControl.valueChanges
+        .debounceTime(500)
+        .subscribe(
+            data => {
+                if(data){
+                    console.log('search result: ' + data);
+                    this.searchResults = data;
+                }
+            },
+            error => {
+                console.log('search request error: ' + error)
+            },
+            () => {
+                console.log('Completed search request');
+            }
+        );
+        */
     };
     SearchComponent = __decorate([
         core_1.Component({

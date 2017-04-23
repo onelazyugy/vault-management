@@ -14,7 +14,7 @@ import { CommonService } from './services/common-service';
 
 @NgModule({
   imports: [ 
-      BrowserModule,
+      BrowserModule,    
       HttpModule,
       LogoModule,
       FooterModule,

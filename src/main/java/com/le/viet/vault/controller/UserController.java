@@ -18,11 +18,12 @@ import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/rs")
-public class VaultController {
-	private final Logger LOG = LoggerFactory.getLogger(VaultController.class);
-	@Autowired UserAuth userAuth;
+public class UserController {
+	private final Logger LOG = LoggerFactory.getLogger(UserController.class);
 	@Autowired
-	UserDaoImpl userDao;
+	private UserAuth userAuth;
+	@Autowired
+	private UserDaoImpl userDao;
 
 	@RequestMapping(value = "/ping", method = RequestMethod.GET)
 	public String ping(){

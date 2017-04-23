@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';//for ngModel
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';//for ngModel
 import { CommonModule } from '@angular/common';//for ngIf and pipe and more...
 
 import { SearchModule } from '../search/search.module';
@@ -15,6 +15,7 @@ import { LoginComponent } from '../login/login.component';
     ],
     imports:[
         FormsModule,
+        ReactiveFormsModule,
         CommonModule,
         RouterModule.forChild([
             {path: 'home', component: HomeComponent}
