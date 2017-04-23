@@ -34,13 +34,51 @@ export class SearchComponent implements OnInit{
 
     ngOnInit() {
         console.log('ngOnInit from search component');
+        
         this.seachControl.valueChanges
-            .debounceTime(1000)
+            .debounceTime(500)
             .subscribe(
-                s => {
-                    this.searchString = s;
-                    console.log("s ==>: " + s);
-        });
+                query => {
+                    this.model.query = query;
+                    console.log("model for search is: " + this.model.query);
+                    this.searchService.search(this.model).subscribe(
+                        data => {
+                            if(data){
+                                console.log('search result: ' + data);
+                                this.searchResults = data;
+                            }
+                        }, 
+                        error => {
+                            console.log('search request error: ' + error)
+                        },
+                        () => {
+                            console.log('Completed search request');
+                        }
+                    );
+                    this.searchString = query;
+                    console.log("my search query is: ==>: " + query);
+                });
+
+    /*
+    query(){
+        console.log('query() model==>' + this.model.query);
+        this.searchService.search(this.model).subscribe(
+            data => {
+                if(data){
+                    console.log('search result: ' + data);
+                    this.searchResults = data;
+                }
+            },
+            error => {
+                console.log('search request error: ' + error)
+            },
+            () => {
+                console.log('Completed search request');
+            }
+        )
+    }
+    */
+
         /*
         this.searchQueryControl.valueChanges
         .debounceTime(500)
@@ -61,25 +99,7 @@ export class SearchComponent implements OnInit{
         */
     }
     
-    /*
-    query(){
-        console.log('query() model==>' + this.model.query);
-        this.searchService.search(this.model).subscribe(
-            data => {
-                if(data){
-                    console.log('search result: ' + data);
-                    this.searchResults = data;
-                }
-            },
-            error => {
-                console.log('search request error: ' + error)
-            },
-            () => {
-                console.log('Completed search request');
-            }
-        )
-    }
-    */
+    
 
 /*
     changed(text: string){
