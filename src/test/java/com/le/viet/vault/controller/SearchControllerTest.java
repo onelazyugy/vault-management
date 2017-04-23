@@ -5,9 +5,10 @@ package com.le.viet.vault.controller;
  */
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.le.viet.vault.exception.SearchException;
-import com.le.viet.vault.model.SearchQuery;
-import com.le.viet.vault.model.SearchQueryResponse;
+import com.le.viet.vault.model.common.ServiceResponseStatus;
+import com.le.viet.vault.model.search.QueryResponses;
+import com.le.viet.vault.model.search.SearchQuery;
+import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,16 +20,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.mockito.BDDMockito.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -57,20 +54,26 @@ public class SearchControllerTest {
 
     @Test
     public void testSearchReturnContent() throws Exception{
-        SearchQueryResponse[] actual = new SearchQueryResponse[2];
+        SearchQueryResponse actual = new SearchQueryResponse();
 
-        SearchQueryResponse response = new SearchQueryResponse();
-        response.setPassword("password");
-        response.setUsername("username");
-        response.setTag("tag1|tag2");
+        QueryResponses[] responses = new QueryResponses[2];
+        QueryResponses qr1 = new QueryResponses();
+        qr1.setPassword("password");
+        qr1.setUsername("username");
+        qr1.setTag("tag1|tag2");
 
-        SearchQueryResponse response2 = new SearchQueryResponse();
-        response2.setPassword("password2");
-        response2.setUsername("myusername2");
-        response2.setTag("mytag2");
+        QueryResponses qr2 = new QueryResponses();
+        qr2.setPassword("password2");
+        qr2.setUsername("myusername2");
+        qr2.setTag("mytag2");
 
-        actual[0] = response;
-        actual[1] = response2;
+        ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
+        serviceResponseStatus.setMessage("success");
+        serviceResponseStatus.setSuccess(true);
+
+        responses[0] = qr1; responses[1] = qr2;
+        actual.setQueryResponses(responses);
+        actual.setServiceResponseStatus(serviceResponseStatus);
 
         String requestJSON = "{\n" +
                 "\t\"query\": \"boa|chase\"\t\n" +
@@ -88,8 +91,8 @@ public class SearchControllerTest {
                 .andExpect(status().isOk()).andReturn();
         String expectedJSON = mvcResult.getResponse().getContentAsString();
         System.out.println("expectedJSON: " + expectedJSON);
-        SearchQueryResponse[] expected = new ObjectMapper().readValue(expectedJSON, SearchQueryResponse[].class);
-        assertArrayEquals(expected, actual);
+        SearchQueryResponse expected = new ObjectMapper().readValue(expectedJSON, SearchQueryResponse.class);
+        assertEquals(expected, actual);
         verify(searchService, atLeastOnce()).search(searchQuery);
     }
 }

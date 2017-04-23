@@ -22,6 +22,9 @@ export class SearchComponent implements OnInit{
 
     searchResults: any[] = [];
     searchString = '';
+    serviceResponseMessage = '';
+    serviceResponseStatus : boolean;
+    resultCount: number;
    
     searchFormGroup: FormGroup;
     seachControl = new FormControl();
@@ -43,6 +46,9 @@ export class SearchComponent implements OnInit{
                     data => {
                         if(data){                            
                             this.searchResults = data;
+                            this.resultCount = data.queryResponses.length;                            
+                            this.serviceResponseMessage = data.serviceResponseStatus.message
+                            this.serviceResponseStatus = data.serviceResponseStatus.success;                        
                         }
                     }, 
                     error => {

@@ -2,7 +2,7 @@ package com.le.viet.vault.user;
 
 import com.le.viet.vault.dao.UserDaoImpl;
 import com.le.viet.vault.exception.VaultException;
-import com.le.viet.vault.model.User;
+import com.le.viet.vault.model.auth.User;
 import com.le.viet.vault.validation.GeneralValidation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

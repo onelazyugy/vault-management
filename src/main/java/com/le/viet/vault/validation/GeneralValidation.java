@@ -1,6 +1,6 @@
 package com.le.viet.vault.validation;
 
-import com.le.viet.vault.model.User;
+import com.le.viet.vault.model.auth.User;
 
 /**
  * Created by onelazyguy on 1/2/17.

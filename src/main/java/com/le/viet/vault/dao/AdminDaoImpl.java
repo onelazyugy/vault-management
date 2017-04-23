@@ -1,7 +1,7 @@
 package com.le.viet.vault.dao;
 
 import com.le.viet.vault.exception.VaultException;
-import com.le.viet.vault.model.AdminEntry;
+import com.le.viet.vault.model.entry.AdminEntry;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;

@@ -18,15 +18,19 @@
                                 </tr>      
                             </thead>
                             <tbody>
-                                <tr *ngFor="let result of searchResults">
+                                <tr *ngFor="let result of searchResults.queryResponses">
                                     <td>{{result.tag}}</td>
                                     <td>{{result.username}}</td>
                                     <td>{{result.password}}</td>                                    
                                 </tr>
                             </tbody>   
                         </table>        
+                    </div>                    
+                </div>
+                <div  class="row">
+                    <div class="col-md-12">
+                        <b>search:</b> {{model.query}} | <b>result count:</b> {{resultCount}} | <b>status:</b> {{serviceResponseStatus}} | <b>message:</b> {{serviceResponseMessage}}
                     </div>
-                    looking for: {{model.query}}
                 </div>
             </div>    
         </div>     

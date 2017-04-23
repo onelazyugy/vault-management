@@ -1,4 +1,4 @@
-package com.le.viet.vault.model;
+package com.le.viet.vault.model.entry;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

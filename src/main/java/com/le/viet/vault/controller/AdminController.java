@@ -2,7 +2,7 @@ package com.le.viet.vault.controller;
 
 import com.le.viet.vault.dao.AdminDaoImpl;
 import com.le.viet.vault.exception.VaultException;
-import com.le.viet.vault.model.AdminEntry;
+import com.le.viet.vault.model.entry.AdminEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

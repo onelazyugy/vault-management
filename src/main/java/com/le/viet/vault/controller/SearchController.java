@@ -1,9 +1,8 @@
 package com.le.viet.vault.controller;
 
-import com.le.viet.vault.dao.SearchDaoImpl;
 import com.le.viet.vault.exception.SearchException;
-import com.le.viet.vault.model.SearchQuery;
-import com.le.viet.vault.model.SearchQueryResponse;
+import com.le.viet.vault.model.search.SearchQuery;
+import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,8 +24,8 @@ public class SearchController {
     private SearchService searchService;
 
     @RequestMapping(value = "/search", method = RequestMethod.POST, produces= MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public SearchQueryResponse[] search(@RequestBody SearchQuery searchQuery){
-        SearchQueryResponse[] responses = null;
+    public SearchQueryResponse search(@RequestBody SearchQuery searchQuery){
+        SearchQueryResponse responses = null;
         try{
              responses = this.searchService.search(searchQuery);
         }catch (SearchException se){

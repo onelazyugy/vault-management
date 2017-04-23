@@ -1,8 +1,8 @@
 package com.le.viet.vault.dao;
 
 import com.le.viet.vault.exception.VaultException;
-import com.le.viet.vault.model.AdminEntry;
-import com.le.viet.vault.model.SearchQuery;
+import com.le.viet.vault.model.entry.AdminEntry;
+import com.le.viet.vault.model.search.SearchQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

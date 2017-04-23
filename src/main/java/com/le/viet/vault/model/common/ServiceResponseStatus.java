@@ -1,4 +1,4 @@
-package com.le.viet.vault.model;
+package com.le.viet.vault.model.common;
 
 /**
  * Created by onelazyguy on 4/23/17.

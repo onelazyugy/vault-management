@@ -1,4 +1,4 @@
-package com.le.viet.vault.model;
+package com.le.viet.vault.model.search;
 
 /**
  * Created by onelazyguy on 3/18/17.
