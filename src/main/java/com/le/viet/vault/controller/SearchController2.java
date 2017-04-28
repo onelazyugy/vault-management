@@ -1,6 +1,6 @@
 package com.le.viet.vault.controller;
 
-import com.le.viet.vault.exception.SearchException;
+import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 
 /**
  * Created by associate on 4/28/17.
@@ -28,7 +29,8 @@ public class SearchController2 {
         SearchQueryResponse responses = null;
         try{
             responses = this.searchService.search(searchQuery);
-        }catch (SearchException se){
+            //TODO: need a response object back to UI
+        } catch (ServiceException se){
             LOG.error("SearchException: " + se.getMessage());
         }
         return responses;

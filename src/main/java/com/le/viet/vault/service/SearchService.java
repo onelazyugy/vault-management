@@ -2,6 +2,7 @@ package com.le.viet.vault.service;
 
 import com.le.viet.vault.dao.SearchDao;
 import com.le.viet.vault.exception.SearchException;
+import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.search.QueryResponses;
 import com.le.viet.vault.model.search.SearchQuery;
@@ -10,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import static com.le.viet.vault.model.common.Common.*;
 
 /**
  * Created by onelazyguy on 4/21/17.
@@ -21,10 +24,10 @@ public class SearchService {
     @Autowired
     private SearchDao searchDao;
 
-    public SearchQueryResponse search(SearchQuery searchQuery) throws SearchException{
+    public SearchQueryResponse search(SearchQuery searchQuery) throws ServiceException{
         LOG.info("STARTED: search");
         if(searchQuery == null){
-            throw new SearchException("search query is null", -1);
+            throw new ServiceException("search query is null", SERVICE_EXCEPTION_CD);
         }
         //call Dao here to search based on the query passed in
         searchDao.search(searchQuery);

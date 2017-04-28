@@ -6,4 +6,5 @@ package com.le.viet.vault.model.common;
 public class Common {
     public static final int GENERAL_EXCEPTION_CD = -1;
     public static final int DAO_EXCEPTION_CD = -2;
+    public static final int SERVICE_EXCEPTION_CD = -3;
 }

@@ -5,10 +5,12 @@ import com.le.viet.vault.model.search.SearchQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by associate on 4/28/17.
  */
+@Service
 public class SearchDaoImpl2 implements SearchDao {
     private final Logger LOG = LoggerFactory.getLogger(SearchDaoImpl2.class);
 

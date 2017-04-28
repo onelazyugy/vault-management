@@ -27,10 +27,10 @@ public class AdminController2 {
     public void addEntry(@RequestBody AdminEntry adminEntry){
         try{
             adminService.addEntry(adminEntry);
-        } catch (ServiceException se){
+        } catch (VaultException ve){
             //TODO: return a response object for UI to parse
-            se.printStackTrace();
-            LOG.error("ServiceException: " + se.getMessage());
+            ve.printStackTrace();
+            LOG.error("ServiceException: " + ve.getMessage());
         }
     }
 
