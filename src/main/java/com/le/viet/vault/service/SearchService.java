@@ -1,6 +1,6 @@
 package com.le.viet.vault.service;
 
-import com.le.viet.vault.dao.SearchDaoImpl;
+import com.le.viet.vault.dao.SearchDao;
 import com.le.viet.vault.exception.SearchException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.search.QueryResponses;
@@ -19,8 +19,7 @@ public class SearchService {
     private final Logger LOG = LoggerFactory.getLogger(SearchService.class);
 
     @Autowired
-    private SearchDaoImpl searchDaoImpl;
-
+    private SearchDao searchDao;
 
     public SearchQueryResponse search(SearchQuery searchQuery) throws SearchException{
         LOG.info("STARTED: search");
@@ -28,7 +27,7 @@ public class SearchService {
             throw new SearchException("search query is null", -1);
         }
         //call Dao here to search based on the query passed in
-
+        searchDao.search(searchQuery);
         //
         SearchQueryResponse searchQueryResponse = new SearchQueryResponse();
         QueryResponses[] queryResponses = new QueryResponses[2];

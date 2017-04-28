@@ -17,4 +17,11 @@ public class VaultException extends Exception{
     public void setStatusCd(int statusCd) {
         this.statusCd = statusCd;
     }
+
+    @Override
+    public String toString() {
+        return "VaultException{" +
+                "statusCd=" + statusCd +
+                '}';
+    }
 }
