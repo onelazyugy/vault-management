@@ -1,7 +1,6 @@
 package com.le.viet.vault.service;
 
 import com.le.viet.vault.dao.SearchDao;
-import com.le.viet.vault.exception.SearchException;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.search.QueryResponses;

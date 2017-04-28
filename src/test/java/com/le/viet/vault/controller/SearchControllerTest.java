@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.mockito.BDDMockito.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@WebMvcTest(SearchController.class)
+@WebMvcTest(SearchController2.class)
 public class SearchControllerTest {
     @Autowired
     private MockMvc mockMvc;

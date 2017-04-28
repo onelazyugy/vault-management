@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/rs")
 public class AdminController2 {
-    private final Logger LOG = LoggerFactory.getLogger(AdminController.class);
+    private final Logger LOG = LoggerFactory.getLogger(AdminController2.class);
     @Autowired
     private AdminService adminService;
 
