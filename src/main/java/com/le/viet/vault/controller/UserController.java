@@ -20,8 +20,8 @@ import javax.servlet.http.HttpSession;
  */
 @RestController
 @RequestMapping("/rs")
-public class UserController2 {
-    private final Logger LOG = LoggerFactory.getLogger(UserController2.class);
+public class UserController {
+    private final Logger LOG = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;

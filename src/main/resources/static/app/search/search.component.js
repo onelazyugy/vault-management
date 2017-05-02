@@ -20,8 +20,8 @@ var SearchComponent = (function () {
         this.searchService = searchService;
         this.model = new searchmodel_1.SearchModel('');
         this.searchResults = [];
-        this.searchString = '';
         this.serviceResponseMessage = '';
+        this.searchString = '';
         this.seachControl = new forms_1.FormControl();
         this.searchFormGroup = new forms_1.FormGroup({});
     }
@@ -31,13 +31,19 @@ var SearchComponent = (function () {
             .valueChanges
             .debounceTime(500)
             .subscribe(function (userSearchInput) {
+            _this.resultCount = 0;
             _this.model.query = userSearchInput;
             _this.searchService.search(_this.model).subscribe(function (data) {
-                if (data) {
+                if (data != null && data.queryResponses != null) {
+                    if (data.queryResponses.length > 0) {
+                        _this.searchResults = data;
+                        _this.resultCount = data.queryResponses.length;
+                        _this.serviceResponseMessage = data.serviceResponseStatus.message;
+                        _this.serviceResponseStatus = data.serviceResponseStatus.success;
+                    }
+                }
+                else {
                     _this.searchResults = data;
-                    _this.resultCount = data.queryResponses.length;
-                    _this.serviceResponseMessage = data.serviceResponseStatus.message;
-                    _this.serviceResponseStatus = data.serviceResponseStatus.success;
                 }
             }, function (error) {
                 console.log('search request error: ' + error);

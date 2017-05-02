@@ -22,8 +22,8 @@ import static com.le.viet.vault.model.common.Common.*;
  * Created by associate on 4/28/17.
  */
 @Service
-public class AdminDaoImpl2 implements AdminDao{
-    private final Logger LOG = LoggerFactory.getLogger(AdminDaoImpl2.class);
+public class AdminDaoImpl implements AdminDao{
+    private final Logger LOG = LoggerFactory.getLogger(AdminDaoImpl.class);
 
     @Autowired
     private MongoTemplate mongoTemplate;
@@ -76,7 +76,7 @@ public class AdminDaoImpl2 implements AdminDao{
                 String id = map.get("_id").toString();
                 String tag = map.get("tag").toString();
                 String pass = map.get("password").toString();
-                String user =map.get("username").toString();
+                String user = map.get("username").toString();
                 String comment = map.get("comment").toString();
                 String dateString = map.get("dateTime").toString();
                 String cat = map.get("category").toString();

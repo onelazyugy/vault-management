@@ -14,7 +14,8 @@ var admin_services_1 = require('../services/admin-services');
 var AdminAddContent = (function () {
     function AdminAddContent(AdminService) {
         this.AdminService = AdminService;
-        this.categories = ['bank', 'shop'];
+        this.addEntryResults = [];
+        this.categories = ['bank', 'shop', 'bill', 'miscellaneous'];
         this.entryModel = new addentrymodel_1.AddEntryModel('default', '', '', '', '', '');
         this.hasCategoryError = false;
         this.responseMsg = '';
@@ -26,25 +27,35 @@ var AdminAddContent = (function () {
         var password = addEntryForm.value.password;
         var confirmPassword = addEntryForm.value.passwordConfirm;
         if (password !== confirmPassword) {
-            this.success = true;
+            this.success = false;
             this.successOrDangerClass = 'danger';
             this.responseMsg = 'passwords do not match. Try again!';
             return false;
         }
         this.AdminService.addEntry(this.entryModel).subscribe(function (data) {
-            if (data) {
-                _this.success = true;
-                _this.successOrDangerClass = 'success';
-                _this.responseMsg = 'success';
-                addEntryForm.reset();
+            if (data != null) {
+                if (data.success) {
+                    _this.addEntryResults = data;
+                    _this.success = data.success;
+                    _this.successOrDangerClass = 'success';
+                    _this.responseMsg = data.message;
+                    addEntryForm.reset();
+                }
+                else {
+                    _this.addEntryResults = data;
+                    _this.success = data.success;
+                    _this.successOrDangerClass = 'danger';
+                    _this.responseMsg = data.message;
+                    addEntryForm.reset();
+                }
             }
             else {
-                _this.success = true;
+                _this.addEntryResults = data;
                 _this.successOrDangerClass = 'danger';
-                _this.responseMsg = 'unable to add entry';
+                _this.responseMsg = 'data is null';
             }
         }, function (error) {
-            _this.success = true;
+            _this.success = false;
             console.error('Error addEntry: ' + error);
             _this.responseMsg = 'error saving entry.';
             _this.successOrDangerClass = 'danger';

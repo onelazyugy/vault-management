@@ -21,11 +21,10 @@ export class SearchComponent implements OnInit{
     model = new SearchModel('');
 
     searchResults: any[] = [];
-    searchString = '';
     serviceResponseMessage = '';
     serviceResponseStatus : boolean;
     resultCount: number;
-   
+    searchString = '';
     searchFormGroup: FormGroup;
     seachControl = new FormControl();
 
@@ -41,14 +40,19 @@ export class SearchComponent implements OnInit{
         .debounceTime(500)
         .subscribe(
             userSearchInput => {
+                this.resultCount = 0;
                 this.model.query = userSearchInput;
                 this.searchService.search(this.model).subscribe(
                     data => {
-                        if(data){                            
+                        if(data != null && data.queryResponses != null){
+                            if(data.queryResponses.length > 0){
+                                this.searchResults = data;
+                                this.resultCount = data.queryResponses.length;
+                                this.serviceResponseMessage = data.serviceResponseStatus.message
+                                this.serviceResponseStatus = data.serviceResponseStatus.success;
+                            }
+                        } else {
                             this.searchResults = data;
-                            this.resultCount = data.queryResponses.length;                            
-                            this.serviceResponseMessage = data.serviceResponseStatus.message
-                            this.serviceResponseStatus = data.serviceResponseStatus.success;                        
                         }
                     }, 
                     error => {

@@ -17,7 +17,7 @@ export class AdminService {
 
     constructor(private _http: Http, private commonService: CommonService){}
 
-    addEntry(addEntry: AddEntryModel): Observable<string> {
+    addEntry(addEntry: AddEntryModel): Observable<any> {
         this._addEntryURL = this.commonService.buildRequestURL() + "/rs/addEntry";    
         let bodyRequest = JSON.stringify(addEntry);
         let headers = new Headers({'Content-Type':'application/json'});

@@ -23,7 +23,7 @@ public class AdminService {
     private AdminDao adminDao;
 
     public void addEntry(AdminEntry adminEntry) throws ServiceException{
-        LOG.info("STARTED: addEntry, adminEntry: " + adminEntry.toString());
+        LOG.info("STARTED: addEntry");
         try {
             adminDao.addEntry(adminEntry);
         } catch (DaoException de){

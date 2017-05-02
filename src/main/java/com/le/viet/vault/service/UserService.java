@@ -1,6 +1,6 @@
 package com.le.viet.vault.service;
 
-import com.le.viet.vault.dao.UserDaoImpl2;
+import com.le.viet.vault.dao.UserDaoImpl;
 import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
@@ -24,7 +24,7 @@ public class UserService {
     private final Logger LOG = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
-    private UserDaoImpl2 userDaoImpl2;
+    private UserDaoImpl userDaoImpl2;
 
     public boolean login(User user, HttpServletRequest req)throws VaultException {
         LOG.debug("STARTED: login");

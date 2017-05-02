@@ -56,8 +56,11 @@
                     <button type="submit" class="btn btn-primary pull-right" [disabled]="addEntryForm.invalid">SAVE</button>
                 </p>    
             </div>
-            <div [hidden]="!success" class="col-md-8 pull-left">                
+            <div *ngIf="!success" class="col-md-8 pull-left">
                 <div class="alert alert-{{successOrDangerClass}}" role="alert">{{responseMsg}}</div>
+            </div>
+            <div *ngIf="success" class="col-md-8 pull-left">
+                <div class="alert alert-success" role="alert">{{responseMsg}}</div>
             </div>
         </div>
     </form>

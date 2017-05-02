@@ -1,7 +1,6 @@
 package com.le.viet.vault.dao;
 
 import com.le.viet.vault.exception.DaoException;
-import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.auth.User;
 import com.le.viet.vault.util.Utils;
 import org.slf4j.Logger;
@@ -20,8 +19,8 @@ import static com.le.viet.vault.model.common.Common.DAO_EXCEPTION_CD;
  * Created by associate on 4/28/17.
  */
 @Service
-public class UserDaoImpl2 implements UserDao {
-    private final Logger LOG = LoggerFactory.getLogger(UserDaoImpl2.class);
+public class UserDaoImpl implements UserDao {
+    private final Logger LOG = LoggerFactory.getLogger(UserDaoImpl.class);
 
     @Autowired
     private MongoTemplate mongoTemplate;

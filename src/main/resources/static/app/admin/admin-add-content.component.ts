@@ -11,7 +11,8 @@ import { AdminService } from '../services/admin-services';
 })
 
 export class AdminAddContent {
-    categories: string[] = ['bank', 'shop'];
+    addEntryResults: any[] = [];
+    categories: string[] = ['bank', 'shop', 'bill', 'miscellaneous'];
     entryModel = new AddEntryModel('default', '', '', '', '', '');
     hasCategoryError: boolean = false;
     responseMsg: string = '';
@@ -24,26 +25,35 @@ export class AdminAddContent {
         let password = addEntryForm.value.password;
         let confirmPassword = addEntryForm.value.passwordConfirm;
         if (password !== confirmPassword) {
-            this.success = true;
+            this.success = false;
             this.successOrDangerClass = 'danger';
             this.responseMsg = 'passwords do not match. Try again!'
             return false;
         }
         this.AdminService.addEntry(this.entryModel).subscribe(
             data => {
-                if (data) {
-                    this.success = true;
-                    this.successOrDangerClass = 'success';
-                    this.responseMsg = 'success';
-                    addEntryForm.reset();
+                if (data != null) {
+                    if(data.success){
+                        this.addEntryResults = data;
+                        this.success = data.success;
+                        this.successOrDangerClass = 'success';
+                        this.responseMsg = data.message;
+                        addEntryForm.reset();
+                    } else {
+                        this.addEntryResults = data;
+                        this.success = data.success;
+                        this.successOrDangerClass = 'danger';
+                        this.responseMsg = data.message;
+                        addEntryForm.reset();
+                    }
                 } else {
-                    this.success = true
+                    this.addEntryResults = data;
                     this.successOrDangerClass = 'danger';
-                    this.responseMsg = 'unable to add entry';
+                    this.responseMsg = 'data is null';
                 }
             },
             error => {
-                this.success = true;
+                this.success = false;
                 console.error('Error addEntry: ' + error);
                 this.responseMsg = 'error saving entry.';
                 this.successOrDangerClass = 'danger';

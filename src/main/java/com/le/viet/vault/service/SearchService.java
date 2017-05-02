@@ -3,13 +3,17 @@ package com.le.viet.vault.service;
 import com.le.viet.vault.dao.SearchDao;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
+import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.search.QueryResponses;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 import static com.le.viet.vault.model.common.Common.*;
 
@@ -24,36 +28,29 @@ public class SearchService {
     private SearchDao searchDao;
 
     public SearchQueryResponse search(SearchQuery searchQuery) throws ServiceException{
-        LOG.info("STARTED: search");
+        LOG.info("STARTED: search from SearchService");
         if(searchQuery == null){
             throw new ServiceException("search query is null", SERVICE_EXCEPTION_CD);
         }
-        //call Dao here to search based on the query passed in
-        searchDao.search(searchQuery);
-        //
         SearchQueryResponse searchQueryResponse = new SearchQueryResponse();
-        QueryResponses[] queryResponses = new QueryResponses[2];
-        QueryResponses qr1 = new QueryResponses();
-        qr1.setUsername("test_user");
-        qr1.setPassword("123_password");
-        qr1.setTag("some|tag|here");
-
-        QueryResponses qr2 = new QueryResponses();
-        qr2.setUsername("some_user");
-        qr2.setPassword("123_password");
-        qr2.setTag("some|tag|here");
-        //
-
-        queryResponses[0] = qr1;
-        queryResponses[1] = qr2;
-
-        ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
-        serviceResponseStatus.setMessage("success");
-        serviceResponseStatus.setSuccess(true);
-
-        searchQueryResponse.setQueryResponses(queryResponses);
-        searchQueryResponse.setServiceResponseStatus(serviceResponseStatus);
-
+        List<AdminEntry> adminEntryFoundList;
+        if(StringUtils.isNotBlank(searchQuery.getQuery())){
+            String[] searchTags = searchQuery.getQuery().split("\\|");
+            adminEntryFoundList = searchDao.search(searchTags);
+            if(adminEntryFoundList != null && adminEntryFoundList.size() > 0){
+                QueryResponses[] queryResponseArray = new QueryResponses[adminEntryFoundList.size()];
+                for(int i=0; i<adminEntryFoundList.size(); i++){
+                    QueryResponses queryResponse = new QueryResponses();
+                    AdminEntry adminEntry = adminEntryFoundList.get(i);
+                    queryResponse.setPassword(adminEntry.getPassword().trim());
+                    queryResponse.setTag(adminEntry.getTag().trim());
+                    queryResponse.setUsername(adminEntry.getUsername().trim());
+                    queryResponseArray[i] = queryResponse;
+                }
+                searchQueryResponse.setQueryResponses(queryResponseArray);
+            }
+        }
+        LOG.info("END: search from SearchService");
         return searchQueryResponse;
     }
 }
