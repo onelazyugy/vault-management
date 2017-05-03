@@ -28,9 +28,8 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void addUser(User user) throws DaoException {
         user.setCreatedDate(new Date());
-        Utils utils = new Utils();
         try{
-            String hashedPassword = utils.hash(user.getPassword());
+            String hashedPassword = Utils.hash(user.getPassword());
             user.setPassword(hashedPassword);
             this.mongoTemplate.insert(user);
         } catch (Exception e){
@@ -53,8 +52,7 @@ public class UserDaoImpl implements UserDao {
         User foundUser = this.mongoTemplate.findOne(query, User.class);
         if(foundUser != null ){
             try {
-                Utils utils = new Utils();
-                String inputHashedPass = utils.hash(user.getPassword());
+                String inputHashedPass = Utils.hash(user.getPassword());
                 String storedHashedPass = foundUser.getPassword();
                 String storedUserName = foundUser.getUsername();
                 if(storedUserName.equals(user.getUsername()) && inputHashedPass.equals(storedHashedPass)){

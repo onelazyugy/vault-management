@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.le.viet.vault.model.common.Common.*;
 
@@ -91,6 +88,8 @@ public class AdminDaoImpl implements AdminDao{
                 entries[i] = adminEntry;
             }
             LOG.info("END: retrieveEntries, entries: " + Arrays.toString(entries));
+            Comparator<AdminEntry> adminEntryComparator = Comparator.comparing(AdminEntry::getTag);
+            Arrays.sort(entries, adminEntryComparator);
             return entries;
         } catch (Exception e){
             e.printStackTrace();

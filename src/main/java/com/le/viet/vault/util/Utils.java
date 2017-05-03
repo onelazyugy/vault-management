@@ -8,7 +8,7 @@ import java.security.MessageDigest;
  * Created by onelazyguy on 1/6/17.
  */
 public class Utils {
-    public String hash(String password) throws VaultException {
+    public static String hash(String password) throws VaultException {
         try{
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(password.getBytes());

@@ -17,8 +17,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.*;
+
+import javax.xml.ws.Service;
 
 import static org.junit.Assert.*;
 
@@ -39,17 +40,42 @@ public class SearchControllerTest {
 
     @Test
     public void testSearchIsOkStatus() throws Exception{
+        SearchQueryResponse actual = new SearchQueryResponse();
+
+        QueryResponses[] responses = new QueryResponses[2];
+        QueryResponses qr1 = new QueryResponses();
+        qr1.setPassword("password");
+        qr1.setUsername("username");
+        qr1.setTag("tag1|tag2");
+
+        QueryResponses qr2 = new QueryResponses();
+        qr2.setPassword("password2");
+        qr2.setUsername("myusername2");
+        qr2.setTag("mytag2");
+
+        ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
+        serviceResponseStatus.setMessage("success");
+        serviceResponseStatus.setSuccess(true);
+
+        responses[0] = qr1; responses[1] = qr2;
+        actual.setQueryResponses(responses);
+        actual.setServiceResponseStatus(serviceResponseStatus);
+
         String requestJSON = "{\n" +
                 "\t\"query\": \"boa|chase\"\t\n" +
                 "}";
-        String URI = "/rs/search";
+
         SearchQuery searchQuery = new SearchQuery();
         searchQuery.setQuery("boa|chase");
 
+        when(searchService.search(searchQuery)).thenReturn(actual);//same as the commented out line above
+        String URI = "/rs/search";
         mockMvc.perform(post(URI).header("Content-Type", "application/json")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestJSON)).andDo(print())
                 .andExpect(status().isOk());
+
+        verify(searchService, atLeastOnce()).search(searchQuery);
     }
 
     @Test

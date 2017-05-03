@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import static com.le.viet.vault.model.common.Common.*;
+
 
 /**
  * Created by associate on 4/28/17.
@@ -32,11 +34,11 @@ public class SearchController {
         ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
         try{
             responses = this.searchService.search(searchQuery);
-            serviceResponseStatus.setMessage("success");
+            serviceResponseStatus.setMessage(SUCCESS);
             serviceResponseStatus.setSuccess(true);
         } catch (ServiceException se){
             LOG.error("SearchException: " + se.getMessage());
-            serviceResponseStatus.setMessage("fail");
+            serviceResponseStatus.setMessage(FAIL + " ["+se.getMessage()+"]");
             serviceResponseStatus.setSuccess(false);
         }
         LOG.info("END: /search");
