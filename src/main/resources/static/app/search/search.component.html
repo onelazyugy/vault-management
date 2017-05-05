@@ -14,14 +14,16 @@
                                 <tr>
                                     <th>Tag</th>
                                     <th>UserName</th>
-                                    <th>Password</th>      
+                                    <th>Id</th>
+                                    <th>View</th>
                                 </tr>      
                             </thead>
                             <tbody>
                                 <tr *ngFor="let result of searchResults.queryResponses">
                                     <td>{{result.tag}}</td>
                                     <td>{{result.username}}</td>
-                                    <td>{{result.password}}</td>                                    
+                                    <td>{{result.id}}</td>
+                                    <td><button type="button" class="btn btn-primary btn-xs" (click)="view(result.id)">view</button></td>
                                 </tr>
                             </tbody>   
                         </table>        

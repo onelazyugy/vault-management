@@ -27,11 +27,17 @@ export class SearchComponent implements OnInit{
     searchString = '';
     searchFormGroup: FormGroup;
     seachControl = new FormControl();
+    isCliked = false;
 
     constructor(private searchService: SearchService) {
         this.searchFormGroup = new FormGroup({
             //angular reactive forms, https://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
         })
+     }
+
+     public view(id:string){
+        console.log('view clicked!: ' + id);
+        this.isCliked = true;
      }
 
     ngOnInit() {  

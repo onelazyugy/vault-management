@@ -40,17 +40,22 @@ public class SearchService {
             if(adminEntryFoundList != null && adminEntryFoundList.size() > 0){
                 QueryResponses[] queryResponseArray = new QueryResponses[adminEntryFoundList.size()];
                 for(int i=0; i<adminEntryFoundList.size(); i++){
-                    QueryResponses queryResponse = new QueryResponses();
-                    AdminEntry adminEntry = adminEntryFoundList.get(i);
-                    queryResponse.setPassword(adminEntry.getPassword().trim());
-                    queryResponse.setTag(adminEntry.getTag().trim());
-                    queryResponse.setUsername(adminEntry.getUsername().trim());
-                    queryResponseArray[i] = queryResponse;
+                    queryResponseArray[i] = getQueryResponses(adminEntryFoundList, i);
                 }
                 searchQueryResponse.setQueryResponses(queryResponseArray);
             }
         }
         LOG.info("END: search from SearchService");
         return searchQueryResponse;
+    }
+
+    public QueryResponses getQueryResponses(List<AdminEntry> adminEntryFoundList, int index) {
+        QueryResponses queryResponse = new QueryResponses();
+        AdminEntry adminEntry = adminEntryFoundList.get(index);
+        queryResponse.setPassword(adminEntry.getPassword().trim());
+        queryResponse.setTag(adminEntry.getTag().trim());
+        queryResponse.setUsername(adminEntry.getUsername().trim());
+        queryResponse.setId(adminEntry.getId().trim());
+        return queryResponse;
     }
 }

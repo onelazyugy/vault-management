@@ -7,6 +7,7 @@ public class QueryResponses {
     private String tag;
     private String username;
     private String password;
+    private String id;
 
     public String getTag() {
         return tag;
@@ -32,13 +33,12 @@ public class QueryResponses {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "QueryResponses{" +
-                "tag='" + tag + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
@@ -50,7 +50,8 @@ public class QueryResponses {
 
         if (tag != null ? !tag.equals(that.tag) : that.tag != null) return false;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
-        return password != null ? password.equals(that.password) : that.password == null;
+        if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        return id != null ? id.equals(that.id) : that.id == null;
     }
 
     @Override
@@ -58,6 +59,17 @@ public class QueryResponses {
         int result = tag != null ? tag.hashCode() : 0;
         result = 31 * result + (username != null ? username.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (id != null ? id.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "QueryResponses{" +
+                "tag='" + tag + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", id='" + id + '\'' +
+                '}';
     }
 }

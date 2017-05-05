@@ -23,8 +23,13 @@ var SearchComponent = (function () {
         this.serviceResponseMessage = '';
         this.searchString = '';
         this.seachControl = new forms_1.FormControl();
+        this.isCliked = false;
         this.searchFormGroup = new forms_1.FormGroup({});
     }
+    SearchComponent.prototype.view = function (id) {
+        console.log('view clicked!: ' + id);
+        this.isCliked = true;
+    };
     SearchComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.seachControl
