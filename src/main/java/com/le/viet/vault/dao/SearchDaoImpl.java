@@ -47,7 +47,6 @@ public class SearchDaoImpl implements SearchDao {
     public AdminEntry retrieveEntry(String id) throws DaoException {
         try {
             AdminEntry adminEntry = this.mongoTemplate.findById(id, AdminEntry.class);
-            LOG.info("findById result: " + adminEntry.toString());
             return adminEntry;
         } catch (Exception e){
             e.printStackTrace();

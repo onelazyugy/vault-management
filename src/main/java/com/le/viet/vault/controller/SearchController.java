@@ -4,6 +4,7 @@ import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
+import com.le.viet.vault.model.search.SearchPromptResponse;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
@@ -46,15 +47,19 @@ public class SearchController {
     }
 
     @RequestMapping(value = "/queryEntryById/{id}", method = RequestMethod.GET,  produces= MediaType.APPLICATION_JSON_VALUE)
-    public AdminEntry queryEntryById(@PathVariable String id){
-        AdminEntry adminEntry = new AdminEntry();
+    public SearchPromptResponse queryEntryById(@PathVariable String id){
+        SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
+        ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
         try {
-            adminEntry = searchService.retrieveEntryById(id);
-            //TODO: return a response object for UI to parse
-        }catch (VaultException ve){
-            ve.printStackTrace();
-            LOG.error("VaultException: " + ve.getMessage());
+            searchPromptResponse = searchService.retrieveEntryById(id);
+            serviceResponseStatus.setSuccess(true);
+            serviceResponseStatus.setMessage(SUCCESS);
+        } catch (ServiceException se){
+            LOG.error("ServiceException: " + se.getMessage());
+            serviceResponseStatus.setMessage(FAIL + " ["+se.getMessage()+"]");
+            serviceResponseStatus.setSuccess(false);
         }
-        return adminEntry;
+        searchPromptResponse.setServiceResponseStatus(serviceResponseStatus);
+        return searchPromptResponse;
     }
 }

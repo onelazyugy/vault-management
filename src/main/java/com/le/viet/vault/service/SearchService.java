@@ -6,6 +6,7 @@ import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.search.QueryResponses;
+import com.le.viet.vault.model.search.SearchPromptResponse;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import org.apache.commons.lang3.StringUtils;
@@ -50,18 +51,24 @@ public class SearchService {
         return searchQueryResponse;
     }
 
-    public AdminEntry retrieveEntryById(String id) throws  ServiceException{
-        AdminEntry entry;
+    public SearchPromptResponse retrieveEntryById(String id) throws ServiceException{
+        //AdminEntry entry;
+        SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
         try {
-            entry = searchDao.retrieveEntry(id);
-        }catch (DaoException de){
+            AdminEntry entry = searchDao.retrieveEntry(id);
+            if(entry != null){
+                searchPromptResponse.setPassword(entry.getPassword().trim());
+            } else {
+                throw new ServiceException("entry does not exist for give id", DATA_EXCEPTION);
+            }
+        } catch (DaoException de){
             LOG.error("DaoException: " + de.toString());
             throw new ServiceException(de.getMessage(), de.getStatusCd());
         } catch (Exception e){
             LOG.error("Exception: " + e.getMessage());
             throw new ServiceException(e.getMessage(), GENERAL_EXCEPTION_CD);
         }
-        return entry;
+        return searchPromptResponse;
     }
 
     public QueryResponses getQueryResponses(List<AdminEntry> adminEntryFoundList, int index) {
