@@ -40,17 +40,15 @@ export class SearchComponent implements OnInit{
      }
 
      public view(id:string){
-        console.log('view clicked!: ' + id);
-
-         this.dialogService.addDialog(PromptComponent, {
-         title:'Prompt',
-         question:'Enter your login password: ',
-         data: id   }, { closeByClickingOutside:true })
-         .subscribe((message)=>{
-             //We get dialog result
-             console.log('input result from prompt dialog: ' + message)
-             this.passwordFromPromptDialog = message;
-         });
+        this.dialogService.addDialog(PromptComponent, {
+        title:'Prompt',
+        question:'Enter your login password: ',
+        data: id   }, { closeByClickingOutside:true })
+        .subscribe((message)=>{
+            //We get dialog result
+            console.log('input result from prompt dialog: ' + message)
+            this.passwordFromPromptDialog = message;
+        });
 
      }
 

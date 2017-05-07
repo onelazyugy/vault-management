@@ -3,20 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="32752fee-f1ca-46e3-b3b5-95c5d2a17b98" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.module.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -90,7 +82,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchControllerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/SearchControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -102,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
@@ -1952,14 +1944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/SearchControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1967,6 +1951,14 @@
           <folding>
             <marker date="1494184832415" expanded="true" signature="2871:2879" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="41" lean-forward="false" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

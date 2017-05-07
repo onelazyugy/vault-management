@@ -21,15 +21,20 @@ var PromptComponent = (function (_super) {
         _super.call(this, dialogService);
         this.message = '';
         this.data = '';
+        this.password = '';
     }
     PromptComponent.prototype.apply = function () {
         this.result = this.message;
         this.close();
     };
+    PromptComponent.prototype.getPassword = function () {
+        console.log('getPassword button clicked!--' + this.message);
+        this.password = 'password is ...';
+    };
     PromptComponent = __decorate([
         core_1.Component({
             selector: 'prompt',
-            template: "<div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                   <div class=\"modal-header\">\n                     <button type=\"button\" class=\"close\" (click)=\"close()\">&times;</button>\n                     <h4 class=\"modal-title\">{{title || 'Prompt'}}</h4>\n                   </div>\n                   <div class=\"modal-body\">\n                    <label>Selected: {{data}}</label><br />\n                    <label>{{question}}</label><input type=\"password\" class=\"form-control\" [(ngModel)]=\"message\" name=\"name\" >\n                   </div>\n                   <div class=\"modal-footer\">\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"apply()\">OK</button>\n                     <button type=\"button\" class=\"btn btn-default\" (click)=\"close()\" >Cancel</button>\n                   </div>\n                 </div>\n                </div>"
+            template: "<div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                   <div class=\"modal-header\">\n                     <button type=\"button\" class=\"close\" (click)=\"close()\">&times;</button>\n                     <h4 class=\"modal-title\">{{title || 'Prompt'}}</h4>\n                   </div>\n                   <div class=\"modal-body\">\n                    <label>Selected: {{data}}</label><br />\n                    <label>{{question}}</label><input type=\"password\" class=\"form-control\" [(ngModel)]=\"message\" name=\"name\" ><br />\n                    <div class=\"row\">\n                        <div class=\"col-md-6\">{{password}}</div>                \n                        <div class=\"col-md-6\">\n                            <button type=\"button\" class=\"btn btn-primary pull-right\" (click)=\"getPassword()\">GET PASSWORD</button>\n                        </div>\n                    </div>\n                   </div>\n                   <div class=\"modal-footer\">\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"apply()\">OK</button>\n                     <button type=\"button\" class=\"btn btn-default\" (click)=\"close()\" >Cancel</button>\n                   </div>\n                 </div>\n                </div>"
         }), 
         __metadata('design:paramtypes', [ng2_bootstrap_modal_1.DialogService])
     ], PromptComponent);

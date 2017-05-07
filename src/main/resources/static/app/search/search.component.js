@@ -32,7 +32,6 @@ var SearchComponent = (function () {
     }
     SearchComponent.prototype.view = function (id) {
         var _this = this;
-        console.log('view clicked!: ' + id);
         this.dialogService.addDialog(enter_password_dialog_component_1.PromptComponent, {
             title: 'Prompt',
             question: 'Enter your login password: ',

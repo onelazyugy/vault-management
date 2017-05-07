@@ -17,7 +17,13 @@ export interface PromptModel {
                    </div>
                    <div class="modal-body">
                     <label>Selected: {{data}}</label><br />
-                    <label>{{question}}</label><input type="password" class="form-control" [(ngModel)]="message" name="name" >
+                    <label>{{question}}</label><input type="password" class="form-control" [(ngModel)]="message" name="name" ><br />
+                    <div class="row">
+                        <div class="col-md-6">{{password}}</div>                
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary pull-right" (click)="getPassword()">GET PASSWORD</button>
+                        </div>
+                    </div>
                    </div>
                    <div class="modal-footer">
                      <button type="button" class="btn btn-primary" (click)="apply()">OK</button>
@@ -31,11 +37,19 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
     question: string;
     message: string = '';
     data: string = '';
+    password: string = '';
+    
     constructor(dialogService: DialogService) {
         super(dialogService);
     }
+
     apply() {
         this.result = this.message;
         this.close();
+    }
+
+    getPassword(){
+        console.log('getPassword button clicked!--' + this.message);
+        this.password = 'password is ...';
     }
 }
