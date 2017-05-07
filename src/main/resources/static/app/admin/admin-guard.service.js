@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var Observable_1 = require("rxjs/Observable");
-require("rxjs/add/observable/of");
-var user_auth_service_1 = require("../services/user-auth.service");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var Observable_1 = require('rxjs/Observable');
+require('rxjs/add/observable/of');
+var user_auth_service_1 = require('../services/user-auth.service');
 var AdminRouteGuard = (function () {
     function AdminRouteGuard(_router, userAuthService) {
         this._router = _router;
@@ -37,11 +36,11 @@ var AdminRouteGuard = (function () {
             return Observable_1.Observable.of(false);
         });
     };
+    AdminRouteGuard = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [router_1.Router, user_auth_service_1.UserAuthService])
+    ], AdminRouteGuard);
     return AdminRouteGuard;
 }());
-AdminRouteGuard = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [router_1.Router, user_auth_service_1.UserAuthService])
-], AdminRouteGuard);
 exports.AdminRouteGuard = AdminRouteGuard;
 //# sourceMappingURL=admin-guard.service.js.map

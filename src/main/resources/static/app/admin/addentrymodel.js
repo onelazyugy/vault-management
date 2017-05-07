@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var AddEntryModel = (function () {
     function AddEntryModel(category, tag, password, confirmPassword, username, comment) {
         this.category = category;

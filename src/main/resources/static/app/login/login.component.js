@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var usermodel_1 = require("./usermodel");
-var login_observable_service_1 = require("./login-observable.service");
-var user_auth_service_1 = require("../services/user-auth.service");
+var core_1 = require('@angular/core');
+var usermodel_1 = require('./usermodel');
+var login_observable_service_1 = require('./login-observable.service');
+var user_auth_service_1 = require('../services/user-auth.service');
 var LoginComponent = (function () {
     function LoginComponent(loginObservableService, userAuthService) {
         this.loginObservableService = loginObservableService;
@@ -73,15 +72,15 @@ var LoginComponent = (function () {
             this.messageLabel = 'fail';
         }
     };
+    LoginComponent = __decorate([
+        core_1.Component({
+            selector: 'login',
+            templateUrl: 'app/login/login.component.html',
+            providers: [user_auth_service_1.UserAuthService]
+        }), 
+        __metadata('design:paramtypes', [login_observable_service_1.LoginObservableService, user_auth_service_1.UserAuthService])
+    ], LoginComponent);
     return LoginComponent;
 }());
-LoginComponent = __decorate([
-    core_1.Component({
-        selector: 'login',
-        templateUrl: 'app/login/login.component.html',
-        providers: [user_auth_service_1.UserAuthService]
-    }),
-    __metadata("design:paramtypes", [login_observable_service_1.LoginObservableService, user_auth_service_1.UserAuthService])
-], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

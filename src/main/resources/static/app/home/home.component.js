@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var login_observable_service_1 = require("../login/login-observable.service");
-var logout_observable_service_1 = require("../login/logout-observable.service");
-var user_auth_service_1 = require("../services/user-auth.service");
+var core_1 = require('@angular/core');
+var login_observable_service_1 = require('../login/login-observable.service');
+var logout_observable_service_1 = require('../login/logout-observable.service');
+var user_auth_service_1 = require('../services/user-auth.service');
 var HomeComponent = (function () {
     function HomeComponent(loginObservableService, logoutObservableService, userAuthService) {
         var _this = this;
@@ -61,14 +60,14 @@ var HomeComponent = (function () {
         // prevent memory leak when component destroyed
         this.subscription.unsubscribe();
     };
+    HomeComponent = __decorate([
+        core_1.Component({
+            templateUrl: 'app/home/home.component.html',
+            providers: [user_auth_service_1.UserAuthService]
+        }), 
+        __metadata('design:paramtypes', [login_observable_service_1.LoginObservableService, logout_observable_service_1.LogoutObservableService, user_auth_service_1.UserAuthService])
+    ], HomeComponent);
     return HomeComponent;
 }());
-HomeComponent = __decorate([
-    core_1.Component({
-        templateUrl: 'app/home/home.component.html',
-        providers: [user_auth_service_1.UserAuthService]
-    }),
-    __metadata("design:paramtypes", [login_observable_service_1.LoginObservableService, logout_observable_service_1.LogoutObservableService, user_auth_service_1.UserAuthService])
-], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map
