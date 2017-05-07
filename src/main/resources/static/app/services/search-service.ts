@@ -6,11 +6,13 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 
 import { SearchModel } from '../search/searchmodel';
+import { RetrievePasswordModel } from '../search/retrievepasswordmodel';
 import { CommonService } from './common-service';
 
 @Injectable()
 export class SearchService {
     private _searchURL = '';
+    private _retrievePasswordByIdURL = '';
 
     constructor(private _http: Http, private CommonService: CommonService){}
 
@@ -24,6 +26,14 @@ export class SearchService {
                 .do(data => console.log('/search api result ==>: ' + JSON.stringify(data)))
                 .catch(this.handleError);
     }   
+
+    getPassword(retrievePasswordModel: RetrievePasswordModel): Observable<any>{
+        this._retrievePasswordByIdURL = this.CommonService.buildRequestURL() + "/rs/queryEntryById/" + retrievePasswordModel.id;
+        return this._http.get(this._retrievePasswordByIdURL)
+                        .map((res: Response) => res.json())
+                        .do(data => console.log('/queryEntryById api result ==>: ' + JSON.stringify(data)))
+                        .catch(this.handleError);                
+    }
 
     private handleError(error: Response){
         console.error('handleError ==>: ' + error);

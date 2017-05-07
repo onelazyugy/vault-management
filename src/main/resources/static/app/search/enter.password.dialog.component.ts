@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
 
+import { RetrievePasswordModel } from './retrievepasswordmodel';
+import { SearchService } from '../services/search-service';
+
 export interface PromptModel {
     title:string;
     question:string;
@@ -9,6 +12,7 @@ export interface PromptModel {
 
 @Component({
     selector: 'prompt',
+    providers: [SearchService],
     template: `<div class="modal-dialog">
                 <div class="modal-content">
                    <div class="modal-header">
@@ -16,10 +20,9 @@ export interface PromptModel {
                      <h4 class="modal-title">{{title || 'Prompt'}}</h4>
                    </div>
                    <div class="modal-body">
-                    <label>Selected: {{data}}</label><br />
                     <label>{{question}}</label><input type="password" class="form-control" [(ngModel)]="message" name="name" ><br />
                     <div class="row">
-                        <div class="col-md-6">{{password}}</div>                
+                        <div class="col-md-6">{{response}}</div>                
                         <div class="col-md-6">
                             <button type="button" class="btn btn-primary pull-right" (click)="getPassword()">GET PASSWORD</button>
                         </div>
@@ -37,9 +40,10 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
     question: string;
     message: string = '';
     data: string = '';
-    password: string = '';
+    response: string = '';
+    model = new RetrievePasswordModel('');
     
-    constructor(dialogService: DialogService) {
+    constructor(private searchService: SearchService, dialogService: DialogService) {
         super(dialogService);
     }
 
@@ -50,6 +54,25 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
 
     getPassword(){
         console.log('getPassword button clicked!--' + this.message);
-        this.password = 'password is ...';
+        this.model.id = this.data;
+        this.searchService.getPassword(this.model).subscribe(
+            data => {
+                console.log("data from getPassword==> " + JSON.stringify(data));
+                if(data != null && data.serviceResponseStatus != null){
+                    if(data.serviceResponseStatus.success){
+                        this.response = data.password;
+                    } else {
+                        this.response = data.serviceResponseStatus.message;
+                    }
+                }
+            }, 
+            error => {
+                console.log('search request error: ' + error)
+                this.response = error;
+            },
+            () => {
+                console.log('Completed search request');
+            }
+        )
     }
 }

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32752fee-f1ca-46e3-b3b5-95c5d2a17b98" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchPromptResponse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/SearchDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/SearchDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/common/Common.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/common/Common.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -91,13 +92,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
+            <state relative-caret-position="361">
               <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mongo/vault/admindocument" pinned="false" current-in-tab="true">
+        <entry file="mongo://Mongo/vault/admindocument">
+          <provider selected="true" editor-type-id="MongoData">
+            <state />
           </provider>
         </entry>
       </file>
@@ -117,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/AdminDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
-              <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="60" />
+              <caret line="17" column="60" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -127,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchQueryResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="56" />
+              <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -1491,7 +1499,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35783634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21888413" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21848226" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278496" sideWeight="0.4973545" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2038,7 +2046,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/AdminDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="60" />
+          <caret line="17" column="60" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -2112,7 +2120,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchQueryResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="56" />
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -2153,7 +2161,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="361">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>

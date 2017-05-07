@@ -20,6 +20,7 @@ var SearchService = (function () {
         this._http = _http;
         this.CommonService = CommonService;
         this._searchURL = '';
+        this._retrievePasswordByIdURL = '';
     }
     SearchService.prototype.search = function (searchModel) {
         this._searchURL = this.CommonService.buildRequestURL() + "/rs/search";
@@ -29,6 +30,13 @@ var SearchService = (function () {
         return this._http.post(this._searchURL, bodyRequest, options)
             .map(function (res) { return res.json(); })
             .do(function (data) { return console.log('/search api result ==>: ' + JSON.stringify(data)); })
+            .catch(this.handleError);
+    };
+    SearchService.prototype.getPassword = function (retrievePasswordModel) {
+        this._retrievePasswordByIdURL = this.CommonService.buildRequestURL() + "/rs/queryEntryById/" + retrievePasswordModel.id;
+        return this._http.get(this._retrievePasswordByIdURL)
+            .map(function (res) { return res.json(); })
+            .do(function (data) { return console.log('/queryEntryById api result ==>: ' + JSON.stringify(data)); })
             .catch(this.handleError);
     };
     SearchService.prototype.handleError = function (error) {
