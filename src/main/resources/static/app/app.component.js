@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var login_observable_service_1 = require('./login/login-observable.service');
-var logout_observable_service_1 = require('../app/login/logout-observable.service');
-var user_auth_service_1 = require('../app/services/user-auth.service');
-var router_1 = require('@angular/router');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var login_observable_service_1 = require("./login/login-observable.service");
+var logout_observable_service_1 = require("../app/login/logout-observable.service");
+var user_auth_service_1 = require("../app/services/user-auth.service");
+var router_1 = require("@angular/router");
 var AppComponent = (function () {
     function AppComponent(_router, loginObservableService, logoutObservableService, userAuthService) {
         var _this = this;
@@ -68,16 +69,16 @@ var AppComponent = (function () {
         // prevent memory leak when component destroyed
         this.subscription.unsubscribe();
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'vault',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css'],
-            providers: [login_observable_service_1.LoginObservableService, logout_observable_service_1.LogoutObservableService, user_auth_service_1.UserAuthService] //a service would go in that array
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, login_observable_service_1.LoginObservableService, logout_observable_service_1.LogoutObservableService, user_auth_service_1.UserAuthService])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'vault',
+        templateUrl: 'app/app.component.html',
+        styleUrls: ['app/app.component.css'],
+        providers: [login_observable_service_1.LoginObservableService, logout_observable_service_1.LogoutObservableService, user_auth_service_1.UserAuthService] //a service would go in that array
+    }),
+    __metadata("design:paramtypes", [router_1.Router, login_observable_service_1.LoginObservableService, logout_observable_service_1.LogoutObservableService, user_auth_service_1.UserAuthService])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

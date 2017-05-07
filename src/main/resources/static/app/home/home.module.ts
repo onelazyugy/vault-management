@@ -8,6 +8,10 @@ import { SearchComponent } from '../search/search.component';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from '../login/login.component';
 
+
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+
+
 @NgModule({
     declarations: [
         SearchComponent,
@@ -16,6 +20,7 @@ import { LoginComponent } from '../login/login.component';
     imports:[
         FormsModule,
         ReactiveFormsModule,
+        BootstrapModalModule,
         CommonModule,
         RouterModule.forChild([
             {path: 'home', component: HomeComponent}

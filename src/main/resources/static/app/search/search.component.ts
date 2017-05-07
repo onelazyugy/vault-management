@@ -4,6 +4,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { SearchService } from '../services/search-service';
 import { SearchModel } from './searchmodel';
 
+import { PromptComponent } from './enter.password.dialog.component';
+import { DialogService } from "ng2-bootstrap-modal";
+
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -29,7 +32,10 @@ export class SearchComponent implements OnInit{
     seachControl = new FormControl();
     isCliked = false;
 
-    constructor(private searchService: SearchService) {
+
+    promptMessage:string = '';
+
+    constructor(private searchService: SearchService, private dialogService:DialogService) {
         this.searchFormGroup = new FormGroup({
             //angular reactive forms, https://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
         })
@@ -38,6 +44,15 @@ export class SearchComponent implements OnInit{
      public view(id:string){
         console.log('view clicked!: ' + id);
         this.isCliked = true;
+
+         this.dialogService.addDialog(PromptComponent, {
+         title:'Name dialog',
+         question:'What is your name?: '})
+         .subscribe((message)=>{
+             //We get dialog result
+             this.promptMessage = message;
+         });
+
      }
 
     ngOnInit() {  

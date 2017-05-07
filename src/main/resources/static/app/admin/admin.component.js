@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var AdminComponent = (function () {
     function AdminComponent() {
         this.adminMenuTitle = 'Admin Menu';
@@ -25,14 +26,14 @@ var AdminComponent = (function () {
     AdminComponent.prototype.adminMenuClick = function (option) {
         this.adminContentTitle = option;
     };
-    AdminComponent = __decorate([
-        core_1.Component({
-            templateUrl: 'app/admin/admin.component.html',
-            providers: []
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AdminComponent);
     return AdminComponent;
 }());
+AdminComponent = __decorate([
+    core_1.Component({
+        templateUrl: 'app/admin/admin.component.html',
+        providers: []
+    }),
+    __metadata("design:paramtypes", [])
+], AdminComponent);
 exports.AdminComponent = AdminComponent;
 //# sourceMappingURL=admin.component.js.map

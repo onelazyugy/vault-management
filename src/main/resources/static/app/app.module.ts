@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+
 import { AppComponent }  from './app.component';
 import { LogoModule } from './shared/shared-logo.module';
 import { FooterModule } from './shared/shared-footer.module';
@@ -14,7 +16,8 @@ import { CommonService } from './services/common-service';
 
 @NgModule({
   imports: [ 
-      BrowserModule,    
+      BrowserModule,
+      BootstrapModalModule,
       HttpModule,
       LogoModule,
       FooterModule,

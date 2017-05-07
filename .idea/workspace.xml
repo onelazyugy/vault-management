@@ -2,15 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32752fee-f1ca-46e3-b3b5-95c5d2a17b98" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/biblio.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/css/elements.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/index-out.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/typescript-out.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/typescript.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/Reflect.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/Reflect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/Reflect.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/harness.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/harness.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/harness.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-decorate.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-decorate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-decorate.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-definemetadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-definemetadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-definemetadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-deletemetadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-deletemetadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-deletemetadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getmetadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getmetadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getmetadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getmetadatakeys.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getmetadatakeys.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getmetadatakeys.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getownmetadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getownmetadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getownmetadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getownmetadatakeys.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getownmetadatakeys.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-getownmetadatakeys.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-hasmetadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-hasmetadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-hasmetadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-hasownmetadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-hasownmetadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-hasownmetadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-metadata.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-metadata.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/reflect/reflect-metadata.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/run.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/run.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/run.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/spec.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/temp/test/spec.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/harness.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-decorate.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-definemetadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-deletemetadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-getmetadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-getmetadatakeys.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-getownmetadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-getownmetadatakeys.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-hasmetadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-hasownmetadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/reflect/reflect-metadata.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/run.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/spec.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/typings/node.d.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/QueryResponses.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/QueryResponses.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/addentrymodel.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/addentrymodel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/addentrymodel.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/addentrymodel.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-add-content.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-add-content.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-add-content.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-add-content.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-edit-content.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-edit-content.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-edit-content.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-edit-content.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-guard.service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-guard.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-guard.service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin-guard.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/admin/admin.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.module.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/User.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/User.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/User.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/User.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.html" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/login-observable.service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/login-observable.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/login-observable.service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/login-observable.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/login.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/login.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/login.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/login.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/logout-observable.service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/logout-observable.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/logout-observable.service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/logout-observable.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/usermodel.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/usermodel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/login/usermodel.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/login/usermodel.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/main.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/main.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/main.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/searchmodel.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/searchmodel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/searchmodel.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/searchmodel.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/admin-services.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/admin-services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/admin-services.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/admin-services.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/common-service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/common-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/common-service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/common-service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/user-auth.service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/user-auth.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/user-auth.service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/user-auth.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-footer.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.module.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/shared/shared-logo.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/.eslintrc" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/.eslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/.npmignore" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/lib/lite-server.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/lib/lite-server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/package.json" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/lite-server/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/.npmignore" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/bower.json" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/index.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/index.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/package.json" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/metadata.md" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/spec/metadata.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/standalone.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/standalone.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/tsconfig.json" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/test/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/tsconfig.json" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/.mailmap" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/.mailmap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/AUTHORS.md" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/AUTHORS.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/cancellationToken.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/cancellationToken.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.dom.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.dom.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.dom.iterable.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.dom.iterable.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.collection.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.collection.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.core.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.core.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.generator.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.generator.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.iterable.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.iterable.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.promise.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.promise.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.proxy.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.proxy.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.reflect.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.reflect.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.symbol.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.symbol.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2016.array.include.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2016.array.include.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.object.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.object.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.string.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es2017.string.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es5.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es5.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es6.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.es6.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.scripthost.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.scripthost.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.webworker.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/lib.webworker.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/protocol.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/protocol.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsc.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsserver.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsserver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsserverlibrary.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsserverlibrary.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsserverlibrary.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/tsserverlibrary.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescript.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescript.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescript.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescriptServices.d.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescriptServices.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescriptServices.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typescriptServices.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typingsInstaller.js" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/lib/typingsInstaller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/package.json" afterPath="$PROJECT_DIR$/src/main/resources/static/node_modules/typescript/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/systemjs.config.js" afterPath="$PROJECT_DIR$/src/main/resources/static/systemjs.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -102,104 +272,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="35" column="45" lean-forward="false" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="search.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="375">
               <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchControllerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/SearchControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#250#305#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enter.password.dialog.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+                <marker date="1494019988000" expanded="true" signature="264:1055" ph="..." />
+                <marker date="1494019988000" expanded="true" signature="308:1032" ph="..." />
+                <marker date="1494019988000" expanded="true" signature="354:544" ph="..." />
+                <marker date="1494019988000" expanded="false" signature="431:438" ph="×" />
+                <marker date="1494019988000" expanded="true" signature="588:737" ph="..." />
+                <marker date="1494019988000" expanded="true" signature="783:1008" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="37" column="75" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="75" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryResponses.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/QueryResponses.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="66" column="18" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-              <folding>
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#769#770#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/SearchDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/AdminDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="91" column="55" lean-forward="false" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/util/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/AdminService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -461,8 +625,8 @@
       <map>
         <entry key="$PROJECT_DIR$/../dashboard" value="2931565428948" />
         <entry key="$PROJECT_DIR$/../gs-serving-web-content/complete" value="1482990574163" />
-        <entry key="$PROJECT_DIR$" value="2986904755000" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="4276700035" />
+        <entry key="$PROJECT_DIR$" value="2987334919000" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3810062532" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -514,14 +678,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/user/UserAuth.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/VaultController.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/Search.java" />
-        <option value="$PROJECT_DIR$/src/test/java/user/UserAuthTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/le/viet/vault/service/SearchServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/SearchQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/exception/SearchException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/ServiceResponseIndicator.java" />
@@ -544,7 +700,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/AdminController2.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/AdminControllerTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/AdminDaoImpl2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/SearchDaoImpl2.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/app/services/admin-services.ts" />
@@ -564,7 +719,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/QueryResponses.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" />
         <option value="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/systemjs.config.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/node_modules/ng2-bootstrap-modal/dist/dialog.component.d.ts" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/node_modules/ng2-bootstrap-modal/dist/dialog.component.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -575,6 +739,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
     <handled-path value="$PROJECT_DIR$/src/main/resources/static/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
@@ -598,6 +763,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -623,134 +789,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vault" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vault-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -776,7 +816,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -792,11 +832,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vault" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vault-management" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1280,6 +1333,11 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MongoRunConfiguration" factoryName="Mongo">
+      <setting name="path" value="" />
+      <setting name="shellParams" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1394,6 +1452,7 @@
       <workItem from="1493752550579" duration="11898000" />
       <workItem from="1493831844264" duration="11190000" />
       <workItem from="1493917605310" duration="9186000" />
+      <workItem from="1494182129323" duration="390000" />
     </task>
     <servers />
   </component>
@@ -1430,7 +1489,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34271000" />
+    <option name="totallyTimeSpent" value="41007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1465,13 +1524,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35783634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35783634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.4973545" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1484,6 +1542,7 @@
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292047" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1545,6 +1604,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/node_modules/tslint/scripts/buildDocs.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/node_modules/reflect-metadata/Reflect.js.map" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" />
       </list>
     </option>
   </component>
@@ -1666,79 +1727,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/Dao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/exception/SearchException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/exception/VaultException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/auth/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/user/UserAuth.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/validation/GeneralValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/VaultControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/AdminControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/dao/AdminDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/dao/UserDaoImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/service/SearchServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.0/d48f964b56a931ec2712ce5d411a40d114a69753/commons-lang3-3.0-sources.jar!/org/apache/commons/lang3/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1764,7 +1752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1772,7 +1759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="4563" column="16" lean-forward="false" selection-start-line="4563" selection-start-column="12" selection-end-line="4563" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1794,9 +1780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-47">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1825,7 +1808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1864,29 +1846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/SearchControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="50" column="50" lean-forward="true" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/common/Common.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1901,9 +1864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1911,37 +1871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#597#598#0" expanded="false" />
-            <element signature="e#633#634#0" expanded="false" />
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#691#692#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#755#756#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#851#852#0" expanded="false" />
-            <element signature="e#899#900#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#974#975#0" expanded="false" />
-            <element signature="e#1005#1006#0" expanded="false" />
-            <element signature="e#1053#1054#0" expanded="false" />
-            <element signature="e#1093#1094#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="false" />
-            <element signature="e#1159#1160#0" expanded="false" />
-            <element signature="e#1207#1208#0" expanded="false" />
-            <element signature="e#1247#1248#0" expanded="false" />
-            <element signature="e#1282#1283#0" expanded="false" />
-            <element signature="e#1313#1314#0" expanded="false" />
-            <element signature="e#1361#1362#0" expanded="false" />
-            <element signature="e#1401#1402#0" expanded="false" />
-            <element signature="e#1435#1436#0" expanded="false" />
-            <element signature="e#1465#1466#0" expanded="false" />
-            <element signature="e#1511#1512#0" expanded="false" />
-            <element signature="e#1549#1550#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1949,9 +1878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1959,9 +1885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1979,7 +1902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="200" column="24" lean-forward="false" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1987,7 +1909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="582">
           <caret line="534" column="0" lean-forward="true" selection-start-line="534" selection-start-column="0" selection-end-line="534" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1995,7 +1916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2003,7 +1923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2011,7 +1930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="91" column="55" lean-forward="false" selection-start-line="91" selection-start-column="55" selection-end-line="91" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2037,12 +1955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="66" column="18" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
-          <folding>
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2056,26 +1968,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.component.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/node_modules/ng2-bootstrap-modal/src/dialog.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="105">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/node_modules/ng2-bootstrap-modal/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/searchmodel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.component.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/node_modules/ng2-bootstrap-modal/dist/dialog.component.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="32" lean-forward="false" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/node_modules/ng2-bootstrap-modal/dist/dialog.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/systemjs.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="249">
+          <caret line="19" column="80" lean-forward="false" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/home/home.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#250#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <marker date="1494019988000" expanded="true" signature="264:1055" ph="..." />
+            <marker date="1494019988000" expanded="true" signature="308:1032" ph="..." />
+            <marker date="1494019988000" expanded="true" signature="354:544" ph="..." />
+            <marker date="1494019988000" expanded="false" signature="431:438" ph="×" />
+            <marker date="1494019988000" expanded="true" signature="588:737" ph="..." />
+            <marker date="1494019988000" expanded="true" signature="783:1008" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state relative-caret-position="375">
+          <caret line="37" column="75" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app/search/search.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/le/viet/vault/controller/SearchControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
           <folding />
         </state>
       </provider>

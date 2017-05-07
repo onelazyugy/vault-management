@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var admin_services_1 = require('../services/admin-services');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var admin_services_1 = require("../services/admin-services");
 var AdminEditContent = (function () {
     function AdminEditContent(AdminService) {
         this.AdminService = AdminService;
@@ -36,15 +37,15 @@ var AdminEditContent = (function () {
             console.log('Completed queryEntries request');
         });
     };
-    AdminEditContent = __decorate([
-        core_1.Component({
-            selector: 'admin-edit',
-            templateUrl: 'app/admin/admin-edit-content.component.html',
-            providers: [admin_services_1.AdminService]
-        }), 
-        __metadata('design:paramtypes', [admin_services_1.AdminService])
-    ], AdminEditContent);
     return AdminEditContent;
 }());
+AdminEditContent = __decorate([
+    core_1.Component({
+        selector: 'admin-edit',
+        templateUrl: 'app/admin/admin-edit-content.component.html',
+        providers: [admin_services_1.AdminService]
+    }),
+    __metadata("design:paramtypes", [admin_services_1.AdminService])
+], AdminEditContent);
 exports.AdminEditContent = AdminEditContent;
 //# sourceMappingURL=admin-edit-content.component.js.map

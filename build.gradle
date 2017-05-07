@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
+        //jcenter()
         maven {
             url "https://plugins.gradle.org/m2/"
         }
