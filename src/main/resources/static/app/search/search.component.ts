@@ -30,10 +30,8 @@ export class SearchComponent implements OnInit{
     searchString = '';
     searchFormGroup: FormGroup;
     seachControl = new FormControl();
-    isCliked = false;
-
-
-    promptMessage:string = '';
+    //input data from the prompt dialog modal
+    passwordFromPromptDialog:string = '';
 
     constructor(private searchService: SearchService, private dialogService:DialogService) {
         this.searchFormGroup = new FormGroup({
@@ -43,14 +41,15 @@ export class SearchComponent implements OnInit{
 
      public view(id:string){
         console.log('view clicked!: ' + id);
-        this.isCliked = true;
 
          this.dialogService.addDialog(PromptComponent, {
-         title:'Name dialog',
-         question:'What is your name?: '})
+         title:'Prompt',
+         question:'Enter your login password: ',
+         data: id   }, { closeByClickingOutside:true })
          .subscribe((message)=>{
              //We get dialog result
-             this.promptMessage = message;
+             console.log('input result from prompt dialog: ' + message)
+             this.passwordFromPromptDialog = message;
          });
 
      }

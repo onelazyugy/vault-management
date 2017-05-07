@@ -15,6 +15,7 @@ var common_1 = require('@angular/common'); //for ngIf and pipe and more...
 var search_component_1 = require('../search/search.component');
 var home_component_1 = require('./home.component');
 var login_component_1 = require('../login/login.component');
+//modal
 var enter_password_dialog_component_1 = require("../search/enter.password.dialog.component");
 var ng2_bootstrap_modal_1 = require('ng2-bootstrap-modal');
 var HomeModule = (function () {
@@ -30,13 +31,14 @@ var HomeModule = (function () {
             imports: [
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
+                //for more
                 ng2_bootstrap_modal_1.BootstrapModalModule,
                 common_1.CommonModule,
                 router_1.RouterModule.forChild([
                     { path: 'home', component: home_component_1.HomeComponent }
                 ])
             ],
-            //Don't forget add component to entryComponents section
+            //for modal
             entryComponents: [
                 enter_password_dialog_component_1.PromptComponent
             ],

@@ -4,6 +4,7 @@ import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
 export interface PromptModel {
     title:string;
     question:string;
+    data:string
 }
 
 @Component({
@@ -15,7 +16,8 @@ export interface PromptModel {
                      <h4 class="modal-title">{{title || 'Prompt'}}</h4>
                    </div>
                    <div class="modal-body">
-                    <label>{{question}}</label><input type="text" class="form-control" [(ngModel)]="message" name="name" >
+                    <label>Selected: {{data}}</label><br />
+                    <label>{{question}}</label><input type="password" class="form-control" [(ngModel)]="message" name="name" >
                    </div>
                    <div class="modal-footer">
                      <button type="button" class="btn btn-primary" (click)="apply()">OK</button>
@@ -28,6 +30,7 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
     title: string;
     question: string;
     message: string = '';
+    data: string = '';
     constructor(dialogService: DialogService) {
         super(dialogService);
     }

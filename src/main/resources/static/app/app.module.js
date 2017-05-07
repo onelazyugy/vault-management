@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
+//for modal
 var ng2_bootstrap_modal_1 = require('ng2-bootstrap-modal');
 var app_component_1 = require('./app.component');
 var shared_logo_module_1 = require('./shared/shared-logo.module');
@@ -28,6 +29,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                //for modal
                 ng2_bootstrap_modal_1.BootstrapModalModule,
                 http_1.HttpModule,
                 shared_logo_module_1.LogoModule,

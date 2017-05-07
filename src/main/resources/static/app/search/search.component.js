@@ -26,20 +26,21 @@ var SearchComponent = (function () {
         this.serviceResponseMessage = '';
         this.searchString = '';
         this.seachControl = new forms_1.FormControl();
-        this.isCliked = false;
-        this.promptMessage = '';
+        //input data from the prompt dialog modal
+        this.passwordFromPromptDialog = '';
         this.searchFormGroup = new forms_1.FormGroup({});
     }
     SearchComponent.prototype.view = function (id) {
         var _this = this;
         console.log('view clicked!: ' + id);
-        this.isCliked = true;
         this.dialogService.addDialog(enter_password_dialog_component_1.PromptComponent, {
-            title: 'Name dialog',
-            question: 'What is your name?: ' })
+            title: 'Prompt',
+            question: 'Enter your login password: ',
+            data: id }, { closeByClickingOutside: true })
             .subscribe(function (message) {
             //We get dialog result
-            _this.promptMessage = message;
+            console.log('input result from prompt dialog: ' + message);
+            _this.passwordFromPromptDialog = message;
         });
     };
     SearchComponent.prototype.ngOnInit = function () {

@@ -20,6 +20,7 @@ var PromptComponent = (function (_super) {
     function PromptComponent(dialogService) {
         _super.call(this, dialogService);
         this.message = '';
+        this.data = '';
     }
     PromptComponent.prototype.apply = function () {
         this.result = this.message;
@@ -28,7 +29,7 @@ var PromptComponent = (function (_super) {
     PromptComponent = __decorate([
         core_1.Component({
             selector: 'prompt',
-            template: "<div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                   <div class=\"modal-header\">\n                     <button type=\"button\" class=\"close\" (click)=\"close()\">&times;</button>\n                     <h4 class=\"modal-title\">{{title || 'Prompt'}}</h4>\n                   </div>\n                   <div class=\"modal-body\">\n                    <label>{{question}}</label><input type=\"text\" class=\"form-control\" [(ngModel)]=\"message\" name=\"name\" >\n                   </div>\n                   <div class=\"modal-footer\">\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"apply()\">OK</button>\n                     <button type=\"button\" class=\"btn btn-default\" (click)=\"close()\" >Cancel</button>\n                   </div>\n                 </div>\n                </div>"
+            template: "<div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                   <div class=\"modal-header\">\n                     <button type=\"button\" class=\"close\" (click)=\"close()\">&times;</button>\n                     <h4 class=\"modal-title\">{{title || 'Prompt'}}</h4>\n                   </div>\n                   <div class=\"modal-body\">\n                    <label>Selected: {{data}}</label><br />\n                    <label>{{question}}</label><input type=\"password\" class=\"form-control\" [(ngModel)]=\"message\" name=\"name\" >\n                   </div>\n                   <div class=\"modal-footer\">\n                     <button type=\"button\" class=\"btn btn-primary\" (click)=\"apply()\">OK</button>\n                     <button type=\"button\" class=\"btn btn-default\" (click)=\"close()\" >Cancel</button>\n                   </div>\n                 </div>\n                </div>"
         }), 
         __metadata('design:paramtypes', [ng2_bootstrap_modal_1.DialogService])
     ], PromptComponent);

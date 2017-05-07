@@ -8,6 +8,7 @@ import { SearchComponent } from '../search/search.component';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from '../login/login.component';
 
+//modal
 import {PromptComponent} from "../search/enter.password.dialog.component";
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
@@ -21,13 +22,14 @@ import { BootstrapModalModule } from 'ng2-bootstrap-modal';
     imports:[
         FormsModule,
         ReactiveFormsModule,
+        //for more
         BootstrapModalModule,
         CommonModule,
         RouterModule.forChild([
             {path: 'home', component: HomeComponent}
         ])
     ],
-    //Don't forget add component to entryComponents section
+    //for modal
     entryComponents: [
         PromptComponent
     ],
