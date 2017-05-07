@@ -1,7 +1,9 @@
 package com.le.viet.vault.controller;
 
 import com.le.viet.vault.exception.ServiceException;
+import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
+import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
@@ -9,10 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static com.le.viet.vault.model.common.Common.*;
 
@@ -44,5 +43,18 @@ public class SearchController {
         LOG.info("END: /search");
         responses.setServiceResponseStatus(serviceResponseStatus);
         return responses;
+    }
+
+    @RequestMapping(value = "/queryEntryById/{id}", method = RequestMethod.GET,  produces= MediaType.APPLICATION_JSON_VALUE)
+    public AdminEntry queryEntryById(@PathVariable String id){
+        AdminEntry adminEntry = new AdminEntry();
+        try {
+            adminEntry = searchService.retrieveEntryById(id);
+            //TODO: return a response object for UI to parse
+        }catch (VaultException ve){
+            ve.printStackTrace();
+            LOG.error("VaultException: " + ve.getMessage());
+        }
+        return adminEntry;
     }
 }

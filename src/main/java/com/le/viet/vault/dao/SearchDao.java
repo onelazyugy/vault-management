@@ -1,5 +1,6 @@
 package com.le.viet.vault.dao;
 
+import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.search.SearchQuery;
 
@@ -10,4 +11,5 @@ import java.util.List;
  */
 public interface SearchDao {
     List<AdminEntry> search(String[] searchTags);
+    AdminEntry retrieveEntry(String id) throws DaoException;
 }

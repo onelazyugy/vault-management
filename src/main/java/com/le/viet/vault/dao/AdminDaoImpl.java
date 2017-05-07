@@ -54,7 +54,7 @@ public class AdminDaoImpl implements AdminDao{
     }
 
     @Override
-    public AdminEntry retrieveEntry() throws DaoException {
+    public AdminEntry retrieveEntry(String id) throws DaoException {
         return null;
     }
 

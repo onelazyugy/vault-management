@@ -1,5 +1,6 @@
 package com.le.viet.vault.dao;
 
+import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.model.entry.AdminEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.stream.Stream;
+
+import static com.le.viet.vault.model.common.Common.DAO_EXCEPTION_CD;
 
 /**
  * Created by associate on 4/28/17.
@@ -38,5 +41,18 @@ public class SearchDaoImpl implements SearchDao {
         Collections.sort(adminEntryFoundList, adminEntryComparator);
         LOG.info("END: search: adminEntryFoundList" + adminEntryFoundList.toString());
         return adminEntryFoundList;
+    }
+
+    @Override
+    public AdminEntry retrieveEntry(String id) throws DaoException {
+        try {
+            AdminEntry adminEntry = this.mongoTemplate.findById(id, AdminEntry.class);
+            LOG.info("findById result: " + adminEntry.toString());
+            return adminEntry;
+        } catch (Exception e){
+            e.printStackTrace();
+            LOG.error("Exception: " + e.getMessage());
+            throw new DaoException(e.getMessage(), DAO_EXCEPTION_CD);
+        }
     }
 }

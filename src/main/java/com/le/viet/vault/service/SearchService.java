@@ -1,6 +1,7 @@
 package com.le.viet.vault.service;
 
 import com.le.viet.vault.dao.SearchDao;
+import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
@@ -47,6 +48,20 @@ public class SearchService {
         }
         LOG.info("END: search from SearchService");
         return searchQueryResponse;
+    }
+
+    public AdminEntry retrieveEntryById(String id) throws  ServiceException{
+        AdminEntry entry;
+        try {
+            entry = searchDao.retrieveEntry(id);
+        }catch (DaoException de){
+            LOG.error("DaoException: " + de.toString());
+            throw new ServiceException(de.getMessage(), de.getStatusCd());
+        } catch (Exception e){
+            LOG.error("Exception: " + e.getMessage());
+            throw new ServiceException(e.getMessage(), GENERAL_EXCEPTION_CD);
+        }
+        return entry;
     }
 
     public QueryResponses getQueryResponses(List<AdminEntry> adminEntryFoundList, int index) {
