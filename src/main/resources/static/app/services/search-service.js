@@ -33,8 +33,11 @@ var SearchService = (function () {
             .catch(this.handleError);
     };
     SearchService.prototype.getPassword = function (retrievePasswordModel) {
-        this._retrievePasswordByIdURL = this.CommonService.buildRequestURL() + "/rs/queryEntryById/" + retrievePasswordModel.id;
-        return this._http.get(this._retrievePasswordByIdURL)
+        this._retrievePasswordByIdURL = this.CommonService.buildRequestURL() + "/rs/queryEntryById";
+        var bodyRequest = JSON.stringify(retrievePasswordModel);
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this._http.post(this._retrievePasswordByIdURL, bodyRequest, options)
             .map(function (res) { return res.json(); })
             .do(function (data) { return console.log('/queryEntryById api result ==>: ' + JSON.stringify(data)); })
             .catch(this.handleError);

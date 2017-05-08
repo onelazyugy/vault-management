@@ -25,7 +25,7 @@ var PromptComponent = (function (_super) {
         this.message = '';
         this.data = '';
         this.response = '';
-        this.model = new retrievepasswordmodel_1.RetrievePasswordModel('');
+        this.model = new retrievepasswordmodel_1.RetrievePasswordModel('', '');
     }
     PromptComponent.prototype.apply = function () {
         this.result = this.message;
@@ -34,7 +34,8 @@ var PromptComponent = (function (_super) {
     PromptComponent.prototype.getPassword = function () {
         var _this = this;
         console.log('getPassword button clicked!--' + this.message);
-        this.model.id = this.data;
+        this.model.id = this.data.trim();
+        this.model.password = this.message.trim();
         this.searchService.getPassword(this.model).subscribe(function (data) {
             console.log("data from getPassword==> " + JSON.stringify(data));
             if (data != null && data.serviceResponseStatus != null) {

@@ -41,7 +41,7 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
     message: string = '';
     data: string = '';
     response: string = '';
-    model = new RetrievePasswordModel('');
+    model = new RetrievePasswordModel('', '');
     
     constructor(private searchService: SearchService, dialogService: DialogService) {
         super(dialogService);
@@ -54,7 +54,8 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
 
     getPassword(){
         console.log('getPassword button clicked!--' + this.message);
-        this.model.id = this.data;
+        this.model.id = this.data.trim();
+        this.model.password = this.message.trim();
         this.searchService.getPassword(this.model).subscribe(
             data => {
                 console.log("data from getPassword==> " + JSON.stringify(data));

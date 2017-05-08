@@ -4,6 +4,7 @@ import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
+import com.le.viet.vault.model.search.SearchPromptRequest;
 import com.le.viet.vault.model.search.SearchPromptResponse;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
@@ -46,12 +47,12 @@ public class SearchController {
         return responses;
     }
 
-    @RequestMapping(value = "/queryEntryById/{id}", method = RequestMethod.GET,  produces= MediaType.APPLICATION_JSON_VALUE)
-    public SearchPromptResponse queryEntryById(@PathVariable String id){
+    @RequestMapping(value = "/queryEntryById", method = RequestMethod.POST,  produces= MediaType.APPLICATION_JSON_VALUE)
+    public SearchPromptResponse queryEntryById(@RequestBody SearchPromptRequest searchPromptRequest){
         SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
         ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
         try {
-            searchPromptResponse = searchService.retrieveEntryById(id);
+            searchPromptResponse = searchService.retrieveEntryById(searchPromptRequest.getId());
             serviceResponseStatus.setSuccess(true);
             serviceResponseStatus.setMessage(SUCCESS);
         } catch (ServiceException se){

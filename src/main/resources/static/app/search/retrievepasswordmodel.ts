@@ -1,3 +1,3 @@
 export class RetrievePasswordModel{
-    constructor(public id:string){}
+    constructor(public id:string, public password:string){}
 }

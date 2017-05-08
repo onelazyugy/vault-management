@@ -28,8 +28,11 @@ export class SearchService {
     }   
 
     getPassword(retrievePasswordModel: RetrievePasswordModel): Observable<any>{
-        this._retrievePasswordByIdURL = this.CommonService.buildRequestURL() + "/rs/queryEntryById/" + retrievePasswordModel.id;
-        return this._http.get(this._retrievePasswordByIdURL)
+        this._retrievePasswordByIdURL = this.CommonService.buildRequestURL() + "/rs/queryEntryById";
+        let bodyRequest = JSON.stringify(retrievePasswordModel);
+        let headers = new Headers({'Content-Type':'application/json'});
+        let options = new RequestOptions({headers: headers});
+        return this._http.post(this._retrievePasswordByIdURL, bodyRequest, options)
                         .map((res: Response) => res.json())
                         .do(data => console.log('/queryEntryById api result ==>: ' + JSON.stringify(data)))
                         .catch(this.handleError);                

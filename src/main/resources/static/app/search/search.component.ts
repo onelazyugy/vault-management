@@ -43,7 +43,7 @@ export class SearchComponent implements OnInit{
         this.dialogService.addDialog(PromptComponent, {
         title:'Prompt',
         question:'Enter your login password: ',
-        data: id   }, { closeByClickingOutside:true })
+        data: id   }, { closeByClickingOutside:false })
         .subscribe((message)=>{
             //We get dialog result
             console.log('input result from prompt dialog: ' + message)

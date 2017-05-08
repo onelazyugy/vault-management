@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32752fee-f1ca-46e3-b3b5-95c5d2a17b98" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchPromptRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/enter.password.dialog.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/retrievepasswordmodel.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/retrievepasswordmodel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/retrievepasswordmodel.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/retrievepasswordmodel.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/retrievepasswordmodel.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/retrievepasswordmodel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/search/search.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js.map" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.ts" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/search-service.ts" />
@@ -92,20 +100,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mongo/vault/admindocument" pinned="false" current-in-tab="true">
-        <entry file="mongo://Mongo/vault/admindocument">
-          <provider selected="true" editor-type-id="MongoData">
-            <state />
+      <file leaf-file-name="SearchPromptRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchPromptRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+                <element signature="e#323#324#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -586,7 +606,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/ServiceResponseIndicator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/ServiceResponseStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/SearchQueryResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/auth/User.java" />
@@ -636,6 +655,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/dao/SearchDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/common/Common.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/service/SearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchPromptRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java" />
       </list>
     </option>
@@ -1499,7 +1519,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35783634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21848226" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21848226" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278496" sideWeight="0.4973545" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1724,13 +1744,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java</url>
-          <line>43</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java</url>
-          <line>35</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="92" />
         </line-breakpoint>
@@ -1754,13 +1774,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java</url>
-          <line>31</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java</url>
-          <line>50</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
@@ -1778,7 +1798,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java</url>
-          <line>53</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
@@ -1816,7 +1836,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/util/Arrays.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/common/ServiceResponseStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -2159,10 +2178,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/model/search/SearchPromptRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/le/viet/vault/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="149">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>

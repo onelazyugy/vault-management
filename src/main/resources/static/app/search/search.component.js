@@ -35,7 +35,7 @@ var SearchComponent = (function () {
         this.dialogService.addDialog(enter_password_dialog_component_1.PromptComponent, {
             title: 'Prompt',
             question: 'Enter your login password: ',
-            data: id }, { closeByClickingOutside: true })
+            data: id }, { closeByClickingOutside: false })
             .subscribe(function (message) {
             //We get dialog result
             console.log('input result from prompt dialog: ' + message);
