@@ -1,6 +1,7 @@
 package com.le.viet.vault.controller;
 
 import com.le.viet.vault.exception.ServiceException;
+import com.le.viet.vault.exception.ValidationException;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
@@ -9,6 +10,7 @@ import com.le.viet.vault.model.search.SearchPromptResponse;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
+import com.le.viet.vault.validation.GeneralValidation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,12 +54,17 @@ public class SearchController {
         SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
         ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
         try {
+            GeneralValidation.isSearchPromptRequestValid(searchPromptRequest);
             searchPromptResponse = searchService.retrieveEntryById(searchPromptRequest.getId());
             serviceResponseStatus.setSuccess(true);
             serviceResponseStatus.setMessage(SUCCESS);
         } catch (ServiceException se){
             LOG.error("ServiceException: " + se.getMessage());
             serviceResponseStatus.setMessage(FAIL + " ["+se.getMessage()+"]");
+            serviceResponseStatus.setSuccess(false);
+        } catch (ValidationException ve){
+            LOG.error("ServiceException: " + ve.getMessage());
+            serviceResponseStatus.setMessage(FAIL + " ["+ve.getMessage()+"]");
             serviceResponseStatus.setSuccess(false);
         }
         searchPromptResponse.setServiceResponseStatus(serviceResponseStatus);
