@@ -46,7 +46,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public boolean verifyUser(User user) throws DaoException{
-        LOG.info("STARTED: verfiyUser");
+        LOG.info("STARTED: verifyUser");
         boolean isUserFound = false;
         Query query = new Query(Criteria.where("username").is(user.getUsername()));
         User foundUser = this.mongoTemplate.findOne(query, User.class);

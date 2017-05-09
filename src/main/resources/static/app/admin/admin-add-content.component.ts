@@ -13,7 +13,7 @@ import { AdminService } from '../services/admin-services';
 export class AdminAddContent {
     addEntryResults: any[] = [];
     categories: string[] = ['bank', 'shop', 'bill', 'miscellaneous'];
-    entryModel = new AddEntryModel('default', '', '', '', '', '');
+    entryModel = new AddEntryModel('default', '', '', '', '', '', '');
     hasCategoryError: boolean = false;
     responseMsg: string = '';
     successOrDangerClass: string = '';
@@ -91,5 +91,10 @@ export class AdminAddContent {
 
     onComentChange(value: string, addEntryForm: NgForm) {
         this.entryModel.comment = value;
+    }
+
+    onMasterPasswordInputChange(value: string, addEntryForm: NgForm) {
+        this.entryModel.masterPassword = value;
+        //call backend service to verfiy the password
     }
 }

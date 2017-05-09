@@ -16,7 +16,7 @@ var AdminAddContent = (function () {
         this.AdminService = AdminService;
         this.addEntryResults = [];
         this.categories = ['bank', 'shop', 'bill', 'miscellaneous'];
-        this.entryModel = new addentrymodel_1.AddEntryModel('default', '', '', '', '', '');
+        this.entryModel = new addentrymodel_1.AddEntryModel('default', '', '', '', '', '', '');
         this.hasCategoryError = false;
         this.responseMsg = '';
         this.successOrDangerClass = '';
@@ -86,6 +86,10 @@ var AdminAddContent = (function () {
     };
     AdminAddContent.prototype.onComentChange = function (value, addEntryForm) {
         this.entryModel.comment = value;
+    };
+    AdminAddContent.prototype.onMasterPasswordInputChange = function (value, addEntryForm) {
+        this.entryModel.masterPassword = value;
+        //call backend service to verfiy the password
     };
     AdminAddContent = __decorate([
         core_1.Component({

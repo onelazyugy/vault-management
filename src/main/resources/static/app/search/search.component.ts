@@ -42,7 +42,7 @@ export class SearchComponent implements OnInit{
      public view(id:string){
         this.dialogService.addDialog(PromptComponent, {
         title:'Prompt',
-        question:'Enter your login password: ',
+        question:'Enter your master password*: ',
         data: id   }, { closeByClickingOutside:false,  backdropColor: 'rgba(6, 25, 13, 0.57)'})
         .subscribe((message)=>{
             //We get dialog result

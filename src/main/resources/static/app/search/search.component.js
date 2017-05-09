@@ -34,7 +34,7 @@ var SearchComponent = (function () {
         var _this = this;
         this.dialogService.addDialog(enter_password_dialog_component_1.PromptComponent, {
             title: 'Prompt',
-            question: 'Enter your login password: ',
+            question: 'Enter your master password*: ',
             data: id }, { closeByClickingOutside: false, backdropColor: 'rgba(6, 25, 13, 0.57)' })
             .subscribe(function (message) {
             //We get dialog result

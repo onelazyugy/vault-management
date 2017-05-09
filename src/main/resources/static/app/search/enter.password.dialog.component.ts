@@ -20,7 +20,9 @@ export interface PromptModel {
                      <h4 class="modal-title">{{title || 'Prompt'}}</h4>
                    </div>
                    <div class="modal-body">
+                    <label>Selected ID: {{data}}</label><br />
                     <label>{{question}}</label><input type="password" class="form-control" [(ngModel)]="message" name="name" ><br />
+                    <label><i><h6>* - the password that you use to login onto this site</h6></i></label><br />
                     <div class="row">
                         <div class="col-md-6">{{response}}</div>                
                         <div class="col-md-6">
@@ -54,6 +56,10 @@ export class PromptComponent extends DialogComponent<PromptModel, string> implem
 
     getPassword(){
         console.log('getPassword button clicked!--' + this.message);
+        if(this.message == ''){
+            this.response = 'password cannot be blank';
+            return false;
+        }
         this.model.id = this.data.trim();
         this.model.password = this.message.trim();
         this.searchService.getPassword(this.model).subscribe(

@@ -50,6 +50,19 @@
                 Confirm password cannot have white space.
             </div>
         </div>
+        <div class="form-group" [class.has-error]="masterPassword.invalid && masterPassword.dirty">
+            <label class="control-label"  for="masterPassword">Master Password*</label>
+            <input #masterPassword="ngModel" id="masterPassword"  type="password" class="form-control" pattern="^[^\s]*" required name="masterPassword" placeholder="enter your master password"
+            [ngModel]="entryModel.masterPassword" (ngModelChange)="onMasterPasswordInputChange($event, addEntryForm)">
+            <div *ngIf="masterPassword.invalid && masterPassword.dirty" class="alert alert-danger">
+                Master password cannot have white space.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label><i><h6>* - the password that you use to login onto this site</h6></i></label>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-4 pull-right">
                 <p class="button btn-toolbar text-center pull-right">

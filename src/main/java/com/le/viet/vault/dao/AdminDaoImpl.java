@@ -2,6 +2,7 @@ package com.le.viet.vault.dao;
 
 import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.model.entry.AdminEntry;
+import com.le.viet.vault.util.Utils;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.rmi.CORBA.Util;
 import java.util.*;
 
 import static com.le.viet.vault.model.common.Common.*;
@@ -29,7 +31,6 @@ public class AdminDaoImpl implements AdminDao{
     public void addEntry(AdminEntry adminEntry) throws DaoException {
         LOG.info("STARTED: addEntry, adminEntry: " + adminEntry.toString());
         try {
-            adminEntry.setDateTime(new Date().toString());
             this.mongoTemplate.insert(adminEntry);
         } catch (Exception e){
             LOG.error("EXCEPTION: from addEntry, " + e.getMessage());

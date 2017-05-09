@@ -1,10 +1,12 @@
 package com.le.viet.vault.service;
 
-import com.le.viet.vault.dao.UserDaoImpl;
+import com.le.viet.vault.dao.UserDao;
 import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.auth.User;
+import com.le.viet.vault.model.entry.AdminEntry;
+import com.le.viet.vault.util.Utils;
 import com.le.viet.vault.validation.GeneralValidation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +26,7 @@ public class UserService {
     private final Logger LOG = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
-    private UserDaoImpl userDaoImpl2;
+    private UserDao userDao;
 
     public boolean login(User user, HttpServletRequest req)throws VaultException {
         LOG.debug("STARTED: login");
@@ -33,7 +35,7 @@ public class UserService {
         boolean isLoginDataValid = GeneralValidation.isLoginDataValid(user);
         if(isLoginDataValid) {
             //check against mongodb
-            boolean isValidUser = userDaoImpl2.verifyUser(user);
+            boolean isValidUser = userDao.verifyUser(user);
             //establish a session
             if(isValidUser){
                 HttpSession session = req.getSession(true);
@@ -65,16 +67,36 @@ public class UserService {
     public boolean verifyUser(User user) throws ServiceException{
         boolean isValidUser;
         try{
-            isValidUser = userDaoImpl2.verifyUser(user);
+            isValidUser = userDao.verifyUser(user);
         } catch (DaoException de){
             throw new ServiceException(de.getMessage(), DAO_EXCEPTION_CD);
         }
         return isValidUser;
     }
 
+    public void verifyUser(HttpServletRequest req, String masterPassword) throws ServiceException{
+        try{
+            User user = new User();
+            HttpSession session = req.getSession(false);
+            if(session != null){
+                String currentUser = (String)session.getAttribute("currentLoggedInUser");
+                boolean hasSession = (boolean)session.getAttribute("hasSession");
+                user.setUsername(currentUser);
+                user.setUserLogin(hasSession);
+                user.setPassword(masterPassword);
+            }
+            boolean isValidUser = userDao.verifyUser(user);
+            if(!isValidUser){
+                throw new ServiceException("master password invalid", SERVICE_EXCEPTION_CD);
+            }
+        } catch (DaoException de){
+            throw new ServiceException(de.getMessage(), DAO_EXCEPTION_CD);
+        }
+    }
+
     public void addUser(User user) throws ServiceException{
         try{
-            userDaoImpl2.addUser(user);
+            userDao.addUser(user);
         }catch (DaoException de){
             throw new ServiceException(de.getMessage(), DAO_EXCEPTION_CD);
         }

@@ -3,12 +3,11 @@ package com.le.viet.vault.service;
 import com.le.viet.vault.dao.SearchDao;
 import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.exception.ServiceException;
+import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
-import com.le.viet.vault.model.search.QueryResponses;
-import com.le.viet.vault.model.search.SearchPromptResponse;
-import com.le.viet.vault.model.search.SearchQuery;
-import com.le.viet.vault.model.search.SearchQueryResponse;
+import com.le.viet.vault.model.search.*;
+import com.le.viet.vault.util.Utils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,19 +50,28 @@ public class SearchService {
         return searchQueryResponse;
     }
 
-    public SearchPromptResponse retrieveEntryById(String id) throws ServiceException{
-        //AdminEntry entry;
+    public SearchPromptResponse retrieveEntryById(SearchPromptRequest searchPromptRequest) throws ServiceException{
         SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
         try {
-            AdminEntry entry = searchDao.retrieveEntry(id);
+            AdminEntry entry = searchDao.retrieveEntry(searchPromptRequest.getId().trim());
             if(entry != null){
-                searchPromptResponse.setPassword(entry.getPassword().trim());
+                String entryMasterPassword = entry.getMasterPassword();
+                String hashedPassword = Utils.hash(searchPromptRequest.getPassword().trim());
+                if(entryMasterPassword.equals(hashedPassword)){
+                    //TODO: use the unhased password from UI to decrypt entry.getPassword()
+                    searchPromptResponse.setPassword(entry.getPassword().trim());
+                } else {
+                    throw new ServiceException("master password provided is incorrect", DATA_EXCEPTION);
+                }
             } else {
                 throw new ServiceException("entry does not exist for give id", DATA_EXCEPTION);
             }
         } catch (DaoException de){
             LOG.error("DaoException: " + de.toString());
             throw new ServiceException(de.getMessage(), de.getStatusCd());
+        } catch (VaultException ve){
+            LOG.error("VaultException: " + ve.getMessage());
+            throw new ServiceException(ve.getMessage(), VALIDATION_EXCEPTION);
         } catch (Exception e){
             LOG.error("Exception: " + e.getMessage());
             throw new ServiceException(e.getMessage(), GENERAL_EXCEPTION_CD);

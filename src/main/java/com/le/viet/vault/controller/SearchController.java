@@ -10,12 +10,15 @@ import com.le.viet.vault.model.search.SearchPromptResponse;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
+import com.le.viet.vault.service.UserService;
 import com.le.viet.vault.validation.GeneralValidation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 import static com.le.viet.vault.model.common.Common.*;
 
@@ -29,6 +32,8 @@ public class SearchController {
     private final Logger LOG = LoggerFactory.getLogger(SearchController.class);
     @Autowired
     private SearchService searchService;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(value = "/search", method = RequestMethod.POST, produces= MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public SearchQueryResponse search(@RequestBody SearchQuery searchQuery){
@@ -50,12 +55,13 @@ public class SearchController {
     }
 
     @RequestMapping(value = "/queryEntryById", method = RequestMethod.POST,  produces= MediaType.APPLICATION_JSON_VALUE)
-    public SearchPromptResponse queryEntryById(@RequestBody SearchPromptRequest searchPromptRequest){
+    public SearchPromptResponse queryEntryById(@RequestBody SearchPromptRequest searchPromptRequest, HttpServletRequest req){
         SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
         ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
         try {
             GeneralValidation.isSearchPromptRequestValid(searchPromptRequest);
-            searchPromptResponse = searchService.retrieveEntryById(searchPromptRequest.getId());
+            userService.verifyUser(req, searchPromptRequest.getPassword().trim());
+            searchPromptResponse = searchService.retrieveEntryById(searchPromptRequest);
             serviceResponseStatus.setSuccess(true);
             serviceResponseStatus.setMessage(SUCCESS);
         } catch (ServiceException se){
