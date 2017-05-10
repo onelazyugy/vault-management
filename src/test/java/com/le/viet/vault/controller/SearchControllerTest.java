@@ -10,6 +10,7 @@ import com.le.viet.vault.model.search.QueryResponses;
 import com.le.viet.vault.model.search.SearchQuery;
 import com.le.viet.vault.model.search.SearchQueryResponse;
 import com.le.viet.vault.service.SearchService;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ import static org.mockito.BDDMockito.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(SearchController.class)
+@Ignore
 public class SearchControllerTest {
     @Autowired
     private MockMvc mockMvc;
