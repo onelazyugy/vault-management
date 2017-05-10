@@ -10,6 +10,9 @@ import { AdminService } from '../services/admin-services';
 
 export class AdminEditContent {
     entries: any[] = [];
+    response: string = '';
+    resultCount: number = 0;
+
     constructor(private AdminService: AdminService) { }
 
     ngOnInit(): void {
@@ -21,15 +24,19 @@ export class AdminEditContent {
     private queryEntries(){
         this.AdminService.queryEntries().subscribe(
             data => {
-                if (data) {
+                if (data != null && data.adminEntryResponse != null) {
                     console.log("Data from queryEntries: " + JSON.stringify(data));
-                    this.entries = data;
-                    console.log("entries: " + this.entries);
-                } else {
-                    
+                    if(data.adminEntryResponse.success){
+                        this.entries = data.adminEntries;
+                        this.response = data.adminEntryResponse.message;
+                        this.resultCount = data.adminEntries.length;
+                    } else {
+                        this.response = data.adminEntryResponse.message;
+                    }                                                       
                 }
             },
             error => {
+                this.response = error;
                 return false;
             },
             () => {

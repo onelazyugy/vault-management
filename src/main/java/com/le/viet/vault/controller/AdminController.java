@@ -4,8 +4,10 @@ import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.entry.AdminEntryResponse;
+import com.le.viet.vault.model.entry.EditEntryResponse;
 import com.le.viet.vault.service.AdminService;
 import com.le.viet.vault.service.UserService;
+import org.omg.PortableInterceptor.SUCCESSFUL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +37,7 @@ public class AdminController {
         AdminEntryResponse adminEntryResponse = new AdminEntryResponse();
         try{
             userService.verifyUser(req, adminEntry.getMasterPassword().trim());
-            adminService.addEntry(adminEntry);
+            adminService.addEntry(req, adminEntry);
             adminEntryResponse.setMessage("success");
             adminEntryResponse.setSuccess(true);
         } catch (ServiceException se){
@@ -48,15 +50,21 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/queryEntries", method = RequestMethod.GET,  produces= MediaType.APPLICATION_JSON_VALUE)
-    public AdminEntry[] queryEntries(){
-        AdminEntry[] adminEntries = null;
+    public EditEntryResponse queryEntries(HttpServletRequest req){
+        AdminEntry[] adminEntries;
+        EditEntryResponse editEntryResponse = new EditEntryResponse();
+        AdminEntryResponse adminEntryResponse = new AdminEntryResponse();
         try {
-            adminEntries = adminService.retrieveEntries();
-            //TODO: return a response object for UI to parse
-        }catch (VaultException ve){
-            ve.printStackTrace();
-            LOG.error("VaultException: " + ve.getMessage());
+            adminEntries = adminService.retrieveEntries(req);
+            editEntryResponse.setAdminEntries(adminEntries);
+            adminEntryResponse.setMessage("success");
+            adminEntryResponse.setSuccess(true);
+        } catch (ServiceException se){
+            LOG.error("ServiceException: " + se.getMessage());
+            adminEntryResponse.setMessage("fail [" + se.getMessage() + "]");
+            adminEntryResponse.setSuccess(false);
         }
-        return adminEntries;
+        editEntryResponse.setAdminEntryResponse(adminEntryResponse);
+        return editEntryResponse;
     }
 }

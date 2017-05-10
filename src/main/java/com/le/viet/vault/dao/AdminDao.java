@@ -16,5 +16,5 @@ public interface AdminDao {
     void removeEntries(List<AdminEntry> entries) throws DaoException;
 
     AdminEntry retrieveEntry(String id) throws DaoException;
-    AdminEntry[] retrieveEntries() throws DaoException;
+    AdminEntry[] retrieveEntries(String username) throws DaoException;
 }

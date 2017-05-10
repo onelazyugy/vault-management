@@ -85,8 +85,7 @@ public class UserService {
                 user.setUserLogin(hasSession);
                 user.setPassword(masterPassword);
             }
-            boolean isValidUser = userDao.verifyUser(user);
-            if(!isValidUser){
+            if(!userDao.verifyUser(user)){
                 throw new ServiceException("master password invalid", SERVICE_EXCEPTION_CD);
             }
         } catch (DaoException de){

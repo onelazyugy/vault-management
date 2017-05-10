@@ -14,6 +14,8 @@ var AdminEditContent = (function () {
     function AdminEditContent(AdminService) {
         this.AdminService = AdminService;
         this.entries = [];
+        this.response = '';
+        this.resultCount = 0;
     }
     AdminEditContent.prototype.ngOnInit = function () {
         console.log('onInit of AdminEditContent');
@@ -23,14 +25,19 @@ var AdminEditContent = (function () {
     AdminEditContent.prototype.queryEntries = function () {
         var _this = this;
         this.AdminService.queryEntries().subscribe(function (data) {
-            if (data) {
+            if (data != null && data.adminEntryResponse != null) {
                 console.log("Data from queryEntries: " + JSON.stringify(data));
-                _this.entries = data;
-                console.log("entries: " + _this.entries);
-            }
-            else {
+                if (data.adminEntryResponse.success) {
+                    _this.entries = data.adminEntries;
+                    _this.response = data.adminEntryResponse.message;
+                    _this.resultCount = data.adminEntries.length;
+                }
+                else {
+                    _this.response = data.adminEntryResponse.message;
+                }
             }
         }, function (error) {
+            _this.response = error;
             return false;
         }, function () {
             console.log('Completed queryEntries request');

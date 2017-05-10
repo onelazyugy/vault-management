@@ -60,13 +60,13 @@ public class AdminDaoImpl implements AdminDao{
     }
 
     @Override
-    public AdminEntry[] retrieveEntries() throws DaoException {
+    public AdminEntry[] retrieveEntries(String currentSessionUsername) throws DaoException {
         LOG.info("STARTED: retrieveEntries");
         try{
             DBCollection collection = this.mongoTemplate.getCollection("admindocument");
             DBCursor cursor = collection.find();
             int entriesSize = cursor.size();
-            AdminEntry[] entries = new AdminEntry[entriesSize];
+            List<AdminEntry> adminEntries = new ArrayList<>();
             for(int i=0; i<entriesSize; i++){
                 AdminEntry adminEntry = new AdminEntry();
                 DBObject dbObject = cursor.next();
@@ -78,20 +78,26 @@ public class AdminDaoImpl implements AdminDao{
                 String comment = map.get("comment").toString();
                 String dateString = map.get("dateTime").toString();
                 String cat = map.get("category").toString();
-
-                adminEntry.setId(id);
-                adminEntry.setTag(tag);
-                adminEntry.setPassword(pass);
-                adminEntry.setUsername(user);
-                adminEntry.setComment(comment);
-                adminEntry.setDateTime(dateString);
-                adminEntry.setCategory(cat);
-                entries[i] = adminEntry;
+                String retrievedUsername = map.get("masterUsername").toString();
+                if(retrievedUsername.equals(currentSessionUsername)) {
+                    adminEntry.setId(id);
+                    adminEntry.setTag(tag);
+                    adminEntry.setPassword(pass);
+                    adminEntry.setUsername(user);
+                    adminEntry.setComment(comment);
+                    adminEntry.setDateTime(dateString);
+                    adminEntry.setCategory(cat);
+                    adminEntries.add(adminEntry);
+                }
             }
-            LOG.info("END: retrieveEntries, entries: " + Arrays.toString(entries));
+            AdminEntry[] adminEntryArr = new AdminEntry[adminEntries.size()];
+            for(int i=0; i<adminEntries.size(); i++){
+                adminEntryArr[i] = adminEntries.get(i);
+            }
+            LOG.info("END: retrieveEntries, entries: " + Arrays.toString(adminEntryArr));
             Comparator<AdminEntry> adminEntryComparator = Comparator.comparing(AdminEntry::getTag);
-            Arrays.sort(entries, adminEntryComparator);
-            return entries;
+            Arrays.sort(adminEntryArr, adminEntryComparator);
+            return adminEntryArr;
         } catch (Exception e){
             e.printStackTrace();
             LOG.error("Exception: " + e.getMessage());

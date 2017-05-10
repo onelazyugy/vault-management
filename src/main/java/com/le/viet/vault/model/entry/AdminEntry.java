@@ -18,6 +18,7 @@ public class AdminEntry {
     private String username;
     private String comment;
     private String masterPassword;
+    private String masterUsername;
 
     //@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private String dateTime;
@@ -86,6 +87,14 @@ public class AdminEntry {
         this.masterPassword = masterPassword;
     }
 
+    public String getMasterUsername() {
+        return masterUsername;
+    }
+
+    public void setMasterUsername(String masterUsername) {
+        this.masterUsername = masterUsername;
+    }
+
     @Override
     public String toString() {
         return "AdminEntry{" +
@@ -96,6 +105,7 @@ public class AdminEntry {
                 ", username='" + username + '\'' +
                 ", comment='" + comment + '\'' +
                 ", masterPassword='" + masterPassword + '\'' +
+                ", masterUsername='" + masterUsername + '\'' +
                 ", dateTime='" + dateTime + '\'' +
                 '}';
     }
