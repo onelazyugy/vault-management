@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -24,9 +26,13 @@ public class SearchDaoImpl implements SearchDao {
     private MongoTemplate mongoTemplate;
 
     @Override
-    public List<AdminEntry> search(String[] searchTags) {
+    public List<AdminEntry> search(String[] searchTags, String currentUser) {
         LOG.info("STARTED: search: " + Arrays.toString(searchTags));
-        List<AdminEntry> adminEntryList = mongoTemplate.findAll(AdminEntry.class);
+        Query query = new Query();
+        Criteria criteria = new Criteria();
+        criteria.andOperator(Criteria.where("masterUsername").in(currentUser));
+        query.addCriteria(criteria);
+        List<AdminEntry> adminEntryList = mongoTemplate.find(query, AdminEntry.class);
         List<AdminEntry> adminEntryFoundList = new ArrayList<>();
         Set<AdminEntry> adminEntrySet = new HashSet<>();
         for(String searchTag : searchTags){

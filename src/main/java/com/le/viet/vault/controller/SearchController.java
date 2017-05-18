@@ -36,12 +36,12 @@ public class SearchController {
     private UserService userService;
 
     @RequestMapping(value = "/search", method = RequestMethod.POST, produces= MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public SearchQueryResponse search(@RequestBody SearchQuery searchQuery){
+    public SearchQueryResponse search(@RequestBody SearchQuery searchQuery, HttpServletRequest request){
         LOG.info("STARTED: /search: " + searchQuery.toString());
         SearchQueryResponse responses = null;
         ServiceResponseStatus serviceResponseStatus = new ServiceResponseStatus();
         try{
-            responses = this.searchService.search(searchQuery);
+            responses = this.searchService.search(searchQuery, request);
             serviceResponseStatus.setMessage(SUCCESS);
             serviceResponseStatus.setSuccess(true);
         } catch (ServiceException se){

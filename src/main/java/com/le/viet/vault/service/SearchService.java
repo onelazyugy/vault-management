@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import static com.le.viet.vault.model.common.Common.*;
@@ -28,25 +30,34 @@ public class SearchService {
     @Autowired
     private SearchDao searchDao;
 
-    public SearchQueryResponse search(SearchQuery searchQuery) throws ServiceException{
+    public SearchQueryResponse search(SearchQuery searchQuery, HttpServletRequest req) throws ServiceException{
         LOG.info("STARTED: search from SearchService");
-        if(searchQuery == null){
-            throw new ServiceException("search query is null", SERVICE_EXCEPTION_CD);
-        }
         SearchQueryResponse searchQueryResponse = new SearchQueryResponse();
-        List<AdminEntry> adminEntryFoundList;
-        if(StringUtils.isNotBlank(searchQuery.getQuery())){
-            String[] searchTags = searchQuery.getQuery().split("\\|");
-            adminEntryFoundList = searchDao.search(searchTags);
-            if(adminEntryFoundList != null && adminEntryFoundList.size() > 0){
-                QueryResponses[] queryResponseArray = new QueryResponses[adminEntryFoundList.size()];
-                for(int i=0; i<adminEntryFoundList.size(); i++){
-                    queryResponseArray[i] = getQueryResponses(adminEntryFoundList, i);
-                }
-                searchQueryResponse.setQueryResponses(queryResponseArray);
+        HttpSession session = req.getSession(false);
+        if(session != null) {
+            String currentUser = (String) session.getAttribute("currentLoggedInUser");
+            if(StringUtils.isBlank(currentUser)){
+                throw new ServiceException("session is not available, please login again", DATA_EXCEPTION);
             }
+            if(searchQuery == null){
+                throw new ServiceException("search query is null", SERVICE_EXCEPTION_CD);
+            }
+            List<AdminEntry> adminEntryFoundList;
+            if(StringUtils.isNotBlank(searchQuery.getQuery())){
+                String[] searchTags = searchQuery.getQuery().split("\\|");
+                adminEntryFoundList = searchDao.search(searchTags, currentUser.trim());
+                if(adminEntryFoundList != null && adminEntryFoundList.size() > 0){
+                    QueryResponses[] queryResponseArray = new QueryResponses[adminEntryFoundList.size()];
+                    for(int i=0; i<adminEntryFoundList.size(); i++){
+                        queryResponseArray[i] = getQueryResponses(adminEntryFoundList, i);
+                    }
+                    searchQueryResponse.setQueryResponses(queryResponseArray);
+                }
+            }
+            LOG.info("END: search from SearchService");
+        } else {
+            throw new ServiceException("session is not available, please login again", DATA_EXCEPTION);
         }
-        LOG.info("END: search from SearchService");
         return searchQueryResponse;
     }
 

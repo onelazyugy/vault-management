@@ -10,6 +10,6 @@ import java.util.List;
  * Created by associate on 4/28/17.
  */
 public interface SearchDao {
-    List<AdminEntry> search(String[] searchTags);
+    List<AdminEntry> search(String[] searchTags, String currentUser);
     AdminEntry retrieveEntry(String id) throws DaoException;
 }
