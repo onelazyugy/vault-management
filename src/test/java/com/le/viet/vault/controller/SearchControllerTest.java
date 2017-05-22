@@ -28,9 +28,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import static org.mockito.BDDMockito.*;
 
+@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(SearchController.class)
-@Ignore
 public class SearchControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -68,14 +68,14 @@ public class SearchControllerTest {
         SearchQuery searchQuery = new SearchQuery();
         searchQuery.setQuery("boa|chase");
 
-        when(searchService.search(searchQuery)).thenReturn(actual);//same as the commented out line above
+        when(searchService.search(searchQuery, null)).thenReturn(actual);//same as the commented out line above
         String URI = "/rs/search";
         mockMvc.perform(post(URI).header("Content-Type", "application/json")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestJSON)).andDo(print())
                 .andExpect(status().isOk());
 
-        verify(searchService, atLeastOnce()).search(searchQuery);
+        verify(searchService, atLeastOnce()).search(searchQuery, null);
     }
 
     @Test
@@ -109,7 +109,7 @@ public class SearchControllerTest {
         searchQuery.setQuery("boa|chase");
 
         //given(searchService.search()).willReturn(actual);
-        when(searchService.search(searchQuery)).thenReturn(actual);//same as the commented out line above
+        when(searchService.search(searchQuery, null)).thenReturn(actual);//same as the commented out line above
         String URI = "/rs/search";
         MvcResult mvcResult = mockMvc.perform(post(URI).header("Content-Type", "application/json")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -119,6 +119,6 @@ public class SearchControllerTest {
         System.out.println("expectedJSON: " + expectedJSON);
         SearchQueryResponse expected = new ObjectMapper().readValue(expectedJSON, SearchQueryResponse.class);
         assertEquals(expected, actual);
-        verify(searchService, atLeastOnce()).search(searchQuery);
+        verify(searchService, atLeastOnce()).search(searchQuery, null);
     }
 }

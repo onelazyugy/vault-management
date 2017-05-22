@@ -3,6 +3,9 @@ package com.le.viet.vault.util;
 import com.le.viet.vault.exception.VaultException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.encrypt.Encryptors;
+import org.springframework.security.crypto.encrypt.TextEncryptor;
+import org.springframework.security.crypto.keygen.KeyGenerators;
 
 import java.security.MessageDigest;
 
@@ -26,5 +29,21 @@ public class Utils {
         } catch (Exception e){
             throw new VaultException(e.getMessage(), 0);
         }
+    }
+
+    public static String generateSalt(){
+        return KeyGenerators.string().generateKey();
+    }
+
+    public static String encrypt(String salt, String masterPassword, String unEncryptedText){
+        TextEncryptor encryptor = Encryptors.text(masterPassword, salt);
+        String encryptedText = encryptor.encrypt(unEncryptedText);
+        return encryptedText;
+    }
+
+    public static String decrypt(String salt, String masterPassword, String encryptedText){
+        TextEncryptor encryptor = Encryptors.text(masterPassword, salt);
+        String deCryptedText = encryptor.encrypt(encryptedText);
+        return deCryptedText;
     }
 }
