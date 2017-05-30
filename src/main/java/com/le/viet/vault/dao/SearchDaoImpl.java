@@ -52,8 +52,7 @@ public class SearchDaoImpl implements SearchDao {
     @Override
     public AdminEntry retrieveEntry(String id) throws DaoException {
         try {
-            AdminEntry adminEntry = this.mongoTemplate.findById(id, AdminEntry.class);
-            return adminEntry;
+            return this.mongoTemplate.findById(id, AdminEntry.class);
         } catch (Exception e){
             e.printStackTrace();
             LOG.error("Exception: " + e.getMessage());
