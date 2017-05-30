@@ -1,9 +1,11 @@
 package com.le.viet.vault.service;
 
 import com.le.viet.vault.dao.AdminDao;
+import com.le.viet.vault.dao.UserDao;
 import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
+import com.le.viet.vault.model.auth.User;
 import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.util.Utils;
 import org.apache.commons.lang3.StringUtils;
@@ -28,6 +30,8 @@ public class AdminService {
 
     @Autowired
     private AdminDao adminDao;
+    @Autowired
+    private UserDao userDao;
 
     public void addEntry(HttpServletRequest req, AdminEntry adminEntry) throws ServiceException{
         LOG.info("STARTED: addEntry");
@@ -38,7 +42,13 @@ public class AdminService {
                 adminEntry.setDateTime(new Date().toString());
                 adminEntry.setMasterPassword(Utils.hash(adminEntry.getMasterPassword().trim()));
                 adminEntry.setMasterUsername(currentUser);
-                //TODO: encrypt the password using the master password as key
+                String entryPassword = adminEntry.getPassword().trim();
+                User queriedUser = userDao.retrieveUser(currentUser);
+                if(queriedUser == null || StringUtils.isBlank(queriedUser.getSalt())) {
+                    throw new ServiceException("unable to retrieve current user information", SERVICE_EXCEPTION_CD);
+                }
+                String encryptedPassword = Utils.encrypt(queriedUser.getSalt(), adminEntry.getMasterPassword().trim(), entryPassword);
+                adminEntry.setPassword(encryptedPassword);
                 adminDao.addEntry(adminEntry);
             } else {
                 throw new ServiceException("session is not available, please login again", DATA_EXCEPTION);

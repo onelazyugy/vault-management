@@ -18,6 +18,7 @@ public class User {
     private String username;
     private String password;
     private boolean isUserLogin;
+    private String salt;
 
     public String getUsername() {
         return username;
@@ -59,6 +60,14 @@ public class User {
         this.createdDate = createdDate;
     }
 
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -67,6 +76,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", isUserLogin=" + isUserLogin +
+                ", salt='" + salt + '\'' +
                 '}';
     }
 }

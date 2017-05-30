@@ -1,5 +1,6 @@
 package com.le.viet.vault.util;
 
+import com.le.viet.vault.exception.ValidationException;
 import com.le.viet.vault.exception.VaultException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +9,8 @@ import org.springframework.security.crypto.encrypt.TextEncryptor;
 import org.springframework.security.crypto.keygen.KeyGenerators;
 
 import java.security.MessageDigest;
+
+import static com.le.viet.vault.model.common.Common.*;
 
 /**
  * Created by onelazyguy on 1/6/17.
@@ -35,15 +38,25 @@ public class Utils {
         return KeyGenerators.string().generateKey();
     }
 
-    public static String encrypt(String salt, String masterPassword, String unEncryptedText){
+    public static String encrypt(String salt, String masterPassword, String unEncryptedText) throws VaultException{
         TextEncryptor encryptor = Encryptors.text(masterPassword, salt);
-        String encryptedText = encryptor.encrypt(unEncryptedText);
+        String encryptedText;
+        if(encryptor != null){
+            encryptedText = encryptor.encrypt(unEncryptedText);
+        } else {
+            throw new ValidationException("TextEncryptor is null", VALIDATION_EXCEPTION);
+        }
         return encryptedText;
     }
 
-    public static String decrypt(String salt, String masterPassword, String encryptedText){
+    public static String decrypt(String salt, String masterPassword, String encryptedText) throws VaultException{
         TextEncryptor encryptor = Encryptors.text(masterPassword, salt);
-        String deCryptedText = encryptor.encrypt(encryptedText);
+        String deCryptedText;
+        if(encryptor != null){
+            deCryptedText = encryptor.encrypt(encryptedText);
+        } else {
+            throw new ValidationException("TextEncryptor is null", VALIDATION_EXCEPTION);
+        }
         return deCryptedText;
     }
 }

@@ -67,4 +67,16 @@ public class UserDaoImpl implements UserDao {
         LOG.info("END: verfiyUser: " + isUserFound);
         return isUserFound;
     }
+
+    @Override
+    public User retrieveUser(String userName) throws DaoException {
+        User foundUser;
+        try{
+            Query query = new Query(Criteria.where("username").is(userName));
+            foundUser = this.mongoTemplate.findOne(query, User.class);
+        }catch (Exception e){
+            throw new DaoException(e.getMessage(), DAO_EXCEPTION_CD);
+        }
+        return foundUser;
+    }
 }

@@ -95,9 +95,12 @@ public class UserService {
 
     public void addUser(User user) throws ServiceException{
         try{
+            user.setSalt(Utils.generateSalt());
             userDao.addUser(user);
-        }catch (DaoException de){
+        } catch (DaoException de){
             throw new ServiceException(de.getMessage(), DAO_EXCEPTION_CD);
+        } catch (Exception e){
+            throw new ServiceException(e.getMessage(), GENERAL_EXCEPTION_CD);
         }
     }
 }
