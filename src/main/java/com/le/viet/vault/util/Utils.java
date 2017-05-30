@@ -53,7 +53,7 @@ public class Utils {
         TextEncryptor encryptor = Encryptors.text(masterPassword, salt);
         String deCryptedText;
         if(encryptor != null){
-            deCryptedText = encryptor.encrypt(encryptedText);
+            deCryptedText = encryptor.decrypt(encryptedText);
         } else {
             throw new ValidationException("TextEncryptor is null", VALIDATION_EXCEPTION);
         }

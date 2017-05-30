@@ -61,7 +61,7 @@ public class SearchController {
         try {
             GeneralValidation.isSearchPromptRequestValid(searchPromptRequest);
             userService.verifyUser(req, searchPromptRequest.getPassword().trim());
-            searchPromptResponse = searchService.retrieveEntryById(searchPromptRequest);
+            searchPromptResponse = searchService.retrieveEntryById(req, searchPromptRequest);
             serviceResponseStatus.setSuccess(true);
             serviceResponseStatus.setMessage(SUCCESS);
         } catch (ServiceException se){

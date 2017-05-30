@@ -1,9 +1,11 @@
 package com.le.viet.vault.service;
 
 import com.le.viet.vault.dao.SearchDao;
+import com.le.viet.vault.dao.UserDao;
 import com.le.viet.vault.exception.DaoException;
 import com.le.viet.vault.exception.ServiceException;
 import com.le.viet.vault.exception.VaultException;
+import com.le.viet.vault.model.auth.User;
 import com.le.viet.vault.model.common.ServiceResponseStatus;
 import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.search.*;
@@ -29,6 +31,8 @@ public class SearchService {
 
     @Autowired
     private SearchDao searchDao;
+    @Autowired
+    private UserDao userDao;
 
     public SearchQueryResponse search(SearchQuery searchQuery, HttpServletRequest req) throws ServiceException{
         LOG.info("STARTED: search from SearchService");
@@ -61,16 +65,26 @@ public class SearchService {
         return searchQueryResponse;
     }
 
-    public SearchPromptResponse retrieveEntryById(SearchPromptRequest searchPromptRequest) throws ServiceException{
+    public SearchPromptResponse retrieveEntryById(HttpServletRequest req, SearchPromptRequest searchPromptRequest) throws ServiceException{
         SearchPromptResponse searchPromptResponse = new SearchPromptResponse();
         try {
             AdminEntry entry = searchDao.retrieveEntry(searchPromptRequest.getId().trim());
             if(entry != null){
-                String entryMasterPassword = entry.getMasterPassword();
-                String hashedPassword = Utils.hash(searchPromptRequest.getPassword().trim());
-                if(entryMasterPassword.equals(hashedPassword)){
-                    //TODO: use the unhased password from UI to decrypt entry.getPassword()
-                    searchPromptResponse.setPassword(entry.getPassword().trim());
+                String entryHashedMasterPassword = entry.getMasterPassword();
+                String inputHashedPassword = Utils.hash(searchPromptRequest.getPassword().trim());
+                if(entryHashedMasterPassword.equals(inputHashedPassword)){
+                    HttpSession session = req.getSession(false);
+                    if(session != null) {
+                        String currentUser = (String) session.getAttribute("currentLoggedInUser");
+                        User queriedUser = userDao.retrieveUser(currentUser);
+                        if(queriedUser == null || StringUtils.isBlank(queriedUser.getSalt())){
+                            throw new ServiceException("unable to retrieve current user information", SERVICE_EXCEPTION_CD);
+                        }
+                        String decryptedPassword = Utils.decrypt(queriedUser.getSalt().trim(), entryHashedMasterPassword, entry.getPassword().trim());
+                        searchPromptResponse.setPassword(decryptedPassword);
+                    }  else {
+                        throw new ServiceException("session is not available, please login again", DATA_EXCEPTION);
+                    }
                 } else {
                     throw new ServiceException("master password provided is incorrect", DATA_EXCEPTION);
                 }
