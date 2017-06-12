@@ -17,7 +17,7 @@ export class AdminEditContent {
 
     ngOnInit(): void {
         console.log('onInit of AdminEditContent');
-        //query all availble entries
+        // query all availble entries
         this.queryEntries();
     }
 
@@ -25,14 +25,14 @@ export class AdminEditContent {
         this.AdminService.queryEntries().subscribe(
             data => {
                 if (data != null && data.adminEntryResponse != null) {
-                    console.log("Data from queryEntries: " + JSON.stringify(data));
-                    if(data.adminEntryResponse.success){
+                    console.log('Data from queryEntries: ' + JSON.stringify(data));
+                    if(data.adminEntryResponse.success) {
                         this.entries = data.adminEntries;
                         this.response = data.adminEntryResponse.message;
                         this.resultCount = data.adminEntries.length;
                     } else {
                         this.response = data.adminEntryResponse.message;
-                    }                                                       
+                    }
                 }
             },
             error => {

@@ -18,23 +18,23 @@ export class AdminService {
     constructor(private _http: Http, private commonService: CommonService){}
 
     addEntry(addEntry: AddEntryModel): Observable<any> {
-        this._addEntryURL = this.commonService.buildRequestURL() + "/rs/addEntry";    
+        this._addEntryURL = this.commonService.buildRequestURL() + '/rs/addEntry';
         let bodyRequest = JSON.stringify(addEntry);
-        let headers = new Headers({'Content-Type':'application/json'});
+        let headers = new Headers({'Content-Type': 'application/json'});
         let options = new RequestOptions({headers: headers});
         return this._http.post(this._addEntryURL, bodyRequest, options)
                 .map((res: Response) => <string> res.json())
                 .do(data => console.log('/addEntry api result ==>: ' + JSON.stringify(data)))
-                .catch(this.handleError);   
+                .catch(this.handleError);
     }
 
     queryEntries(): Observable<any> {
-        this._queryEntriesURL = this.commonService.buildRequestURL() + "/rs/queryEntries";
+        this._queryEntriesURL = this.commonService.buildRequestURL() + '/rs/queryEntries';
         return this._http.get(this._queryEntriesURL)
                 .map((res: Response) => res.json())
                 .do(data => console.log('/queryEntries api result ==>: ' + JSON.stringify(data)))
                 .catch(this.handleError);
-    }   
+    }
 
     private handleError(error: Response){
         console.error('handleError ==>: ' + error);

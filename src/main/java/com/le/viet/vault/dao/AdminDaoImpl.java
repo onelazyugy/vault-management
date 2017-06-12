@@ -79,14 +79,17 @@ public class AdminDaoImpl implements AdminDao{
                 String dateString = map.get("dateTime").toString();
                 String cat = map.get("category").toString();
                 String retrievedUsername = map.get("masterUsername").toString();
+                String masterPassword = map.get("masterPassword").toString();
                 if(retrievedUsername.equals(currentSessionUsername)) {
                     adminEntry.setId(id);
                     adminEntry.setTag(tag);
-                    adminEntry.setPassword("...");
+                    adminEntry.setPassword(pass);
                     adminEntry.setUsername(user);
                     adminEntry.setComment(comment);
                     adminEntry.setDateTime(dateString);
                     adminEntry.setCategory(cat);
+                    adminEntry.setMasterUsername(retrievedUsername);
+                    adminEntry.setMasterPassword(masterPassword);
                     adminEntries.add(adminEntry);
                 }
             }

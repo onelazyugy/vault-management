@@ -1,13 +1,11 @@
 package com.le.viet.vault.controller;
 
 import com.le.viet.vault.exception.ServiceException;
-import com.le.viet.vault.exception.VaultException;
 import com.le.viet.vault.model.entry.AdminEntry;
 import com.le.viet.vault.model.entry.AdminEntryResponse;
 import com.le.viet.vault.model.entry.EditEntryResponse;
 import com.le.viet.vault.service.AdminService;
 import com.le.viet.vault.service.UserService;
-import org.omg.PortableInterceptor.SUCCESSFUL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+
+import static com.le.viet.vault.model.common.Common.FAIL;
+import static com.le.viet.vault.model.common.Common.SUCCESS;
 
 /**
  * Created by associate on 4/28/17.
@@ -38,7 +39,7 @@ public class AdminController {
         try{
             userService.verifyUser(req, adminEntry.getMasterPassword().trim());
             adminService.addEntry(req, adminEntry);
-            adminEntryResponse.setMessage("success");
+            adminEntryResponse.setMessage(SUCCESS);
             adminEntryResponse.setSuccess(true);
         } catch (ServiceException se){
             adminEntryResponse.setMessage(se.getMessage());
@@ -57,11 +58,11 @@ public class AdminController {
         try {
             adminEntries = adminService.retrieveEntries(req);
             editEntryResponse.setAdminEntries(adminEntries);
-            adminEntryResponse.setMessage("success");
+            adminEntryResponse.setMessage(SUCCESS);
             adminEntryResponse.setSuccess(true);
         } catch (ServiceException se){
             LOG.error("ServiceException: " + se.getMessage());
-            adminEntryResponse.setMessage("fail [" + se.getMessage() + "]");
+            adminEntryResponse.setMessage(FAIL + ", [" + se.getMessage() + "]");
             adminEntryResponse.setSuccess(false);
         }
         editEntryResponse.setAdminEntryResponse(adminEntryResponse);

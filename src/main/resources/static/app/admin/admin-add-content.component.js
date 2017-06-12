@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var addentrymodel_1 = require('./addentrymodel');
-var admin_services_1 = require('../services/admin-services');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var addentrymodel_1 = require("./addentrymodel");
+var admin_services_1 = require("../services/admin-services");
 var AdminAddContent = (function () {
     function AdminAddContent(AdminService) {
         this.AdminService = AdminService;
@@ -91,15 +92,15 @@ var AdminAddContent = (function () {
         this.entryModel.masterPassword = value;
         //call backend service to verfiy the password
     };
-    AdminAddContent = __decorate([
-        core_1.Component({
-            selector: 'admin-add',
-            templateUrl: 'app/admin/admin-add-content.component.html',
-            providers: [admin_services_1.AdminService]
-        }), 
-        __metadata('design:paramtypes', [admin_services_1.AdminService])
-    ], AdminAddContent);
     return AdminAddContent;
 }());
+AdminAddContent = __decorate([
+    core_1.Component({
+        selector: 'admin-add',
+        templateUrl: 'app/admin/admin-add-content.component.html',
+        providers: [admin_services_1.AdminService]
+    }),
+    __metadata("design:paramtypes", [admin_services_1.AdminService])
+], AdminAddContent);
 exports.AdminAddContent = AdminAddContent;
 //# sourceMappingURL=admin-add-content.component.js.map

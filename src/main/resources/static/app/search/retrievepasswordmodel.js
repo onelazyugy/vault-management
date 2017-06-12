@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var RetrievePasswordModel = (function () {
     function RetrievePasswordModel(id, password) {
         this.id = id;

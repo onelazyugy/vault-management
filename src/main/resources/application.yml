@@ -1,12 +1,31 @@
 # Local Dev
+---
 lifecycle: default
+spring.data.mongodb.host: 127.0.0.1
+spring.data.mongodb.port: 27017
+spring.data.mongodb.database: vault_default
 
 # Development
 ---
 spring.profiles: development
 lifecycle: development
+spring.data.mongodb.host: TBD
+spring.data.mongodb.port: TBD
+spring.data.mongodb.database: vault_dev
 
 # QA
 ---
 spring.profiles: qa
 lifecycle: qa
+spring.data.mongodb.host: TBD
+spring.data.mongodb.port: TBD
+spring.data.mongodb.database: vault_qa
+
+
+# PR
+---
+spring.profiles: pr
+lifecycle: pr
+spring.data.mongodb.host: 127.0.0.1
+spring.data.mongodb.port: 27017
+spring.data.mongodb.database: vault_pr
