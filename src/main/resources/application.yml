@@ -1,6 +1,7 @@
 # Local Dev
 ---
 lifecycle: default
+server.port: 8085
 spring.data.mongodb.host: 127.0.0.1
 spring.data.mongodb.port: 27017
 spring.data.mongodb.database: vault_default
@@ -26,6 +27,7 @@ spring.data.mongodb.database: vault_qa
 ---
 spring.profiles: pr
 lifecycle: pr
+server.port: 8089
 spring.data.mongodb.host: 127.0.0.1
 spring.data.mongodb.port: 27017
 spring.data.mongodb.database: vault_pr
